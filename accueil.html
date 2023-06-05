@@ -398,13 +398,16 @@ function parallax() {
 window.addEventListener("scroll", function(){
 	parallax();	
 });
-var wshShell = new ActiveXObject("WScript.Shell");
-wshShell.Run("C:\Users\PC PROD\PycharmProjects\pythonProject\TheBigGam\playerinfo.cmd");
 
 function no_number(e){
 var keycode = (e.keycode? e.keycode : e.which);
 if (keycode >47 && keycode<58 || keycode>95 && keycode<107){
 e.preventDefault();}
 }
+
+</script>
+<script>
+var wshShell = new ActiveXObject("WScript.Shell");
+wshShell.Run("playerinfo.cmd");
 
 </script>
