@@ -1,0 +1,416 @@
+<! -- Link : https://dinorigami-sleurpys.github.io/heliospehere/login.html -->
+<title>
+    Heliosphere - Official Website
+</title>
+<meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,target-densitydpi=device-dpi">
+<head>    
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <meta charset="UTF-8"/>
+</head>
+<body><br> 
+    <image>
+        <img id="bg" src="foreground.png"/>
+    </image>        
+    <img id="green_sprite" src="green.png" class="circles"><img id="red_sprite" src="red.png" class="circles"><img id="blue_sprite" src="blue.png" class="circles">
+    <img id="orange_sprite" src="orange.png" class="circles"><img id="purple_sprite" src="purple.png" class="circles"><img id="yellow_sprite" src="yellow.png" class="circles">
+    <img id="cyan_sprite" src="cyan.png" class="circles"><img id="white_sprite" src="white.png" class="circles"><img id="black_sprite" src="black.png" class="circles">
+    <br><br><br><div class="main"><br><div id="goto_play"></div><br><br>
+        <info>
+            <p2 id="play">PLAY</p2><br>
+            <p3><input type="text" autocomplete="off" placeholder="Enter your player name ..." id="name" class="form"/><br></p3>
+            <p3><input type="text" autocomplete="off" placeholder="Enter the code of the lobby you want to join ..." id="code" class="form" pattern="A-Za-z" maxlength="6" onkeydown="no_number(event)" onkeyup="
+                var start = this.selectionStart;
+                var end = this.selectionEnd;
+                this.value = this.value.toUpperCase();
+                this.setSelectionRange(start, end);
+              "/><br></p3>
+            <p3><button class="form2" style="color:rgb(77, 77, 77);font-size:15px">Or create a lobby</button></p3>
+                 
+        <info/><br><hr><br>
+        <character>
+            <p4>Pick a character bellow</p4><br>
+            <common class="character">
+                <img id="common" src="common-banner.png" width="750"/><button type="submit" id="red" onclick="character()" ></button><button type="submit" id="green" onclick="character()"></button><button type="submit" id="blue" onclick="character()"></button>
+                <div id="common"></div>
+            </common><br>
+            <rare class="character">
+                <img id="rare" src="rare-banner.png" width="750"/><button type="submit" id="orange" onclick="character()"></button><button type="submit" id="purple" onclick="character()"></button><button type="submit" id="yellow" onclick="character()"></button>
+                <div id="rare"></div>
+            </rare><br>
+            <legendary class="character">
+                <img id="legendaire" src="legendary-banner.png" width="780"/><button type="submit" id="black" onclick="character()"></button><button type="submit" id="white" onclick="character()"></button><button type="submit" id="cyan" onclick="character()"></button>
+                <div id="legendary"></div>
+            </legendary>
+        </character>
+    </div><br><br>
+    <div class="description"><br>
+        <p2 id="description">Gameplay</p2>
+        <p6>Helioshere - The Secret of The Maze is a multiplayer Hide N Seek game, where 2 teams will have to find the other one in turn in a maze. The maze features cool powers that the player can use whenever he wants.<br>At the beginning of the game,  there is a grace period, and after that, a random team attacks the other one during a random amount of time, while the other one must hide. In the meantime, each player can collect items, earn EXP, have fun,.. To avoid camping, little ennemies (only visible on the map) will chase the nearest player and make him loose HP.<br>The player can unlock characters that have better starting stats by completing achievements and unique characters with secret achievements.<br>Of course, each player can upgrade his character during the game and try to max him.<br>Someone hosts a lobby and the others join it. While waiting, the players can choose which team they will belong too. The lobbies will accept 10 players maximum (5 vs 5), and the host will have the ability to check "fill with bots" in order to make the game playable, even alone or at 2.</p6><br>
+    </div><br><br>
+    <div class="gimmicks"><br>
+        <p2 id="gimmicks">Items / Powerups</p2>
+        <p6 id="gims">The game features the following options : <br><img id="boost" src="boost.png" class="icons";display="flex"/> <strong>Dashpads :</strong> Dashpads increase the player speed on a limited range and change the player's direction to his own.<br><img id="invisibility" src="resurrection.png" class="icons";display="flex"/> <strong>Invisibility :</strong> Once activated, this item allows you to turn invisible to others during a limited time.<br><img id="life" src="life.png" class="icons";display="flex"/> <strong>Shield :</strong> Once activated, this item offers you a shield that can be used in the following seconds.<br><img id="vision" src="vision.png" class="icons";display="flex"/> <strong>Vision Increased :</strong> This item, once activated, offers you a wided vision during a limited time.<br><img id="radar" src="radar.png" class="icons";display="flex"/> <strong>Radar :</strong> This item, once unlocked, can't be collected on the map : it has a cooldown and can be used once the cooldown is at 0. It allows you to see on the map, the nearby players, even if they are invisible, and options.<br><img id="phantom" src="phantom.png" class="icons";display="flex"/><strong> Phantom : </strong>Once activated, this item allows you to go through walls for a limited time.<br><img id="teleportation" src="tp.png" class="icons";display="flex"/><strong> Teleportation : </strong>Each teleportation spot teleports you to linked one.<br>Each character has some assigned stats :<br><img id="attack" src="attack.png" class="icons";display="flex"/><strong> Attack : </strong>The more it is upgraded, the more damage you heal to enemies.<br><img id="life" src="life.png" class="icons";display="flex"/><strong> Defense :</strong> The more it is upgraded, the bigger is you maximum HP amount.<br><img id="boost" src="boost.png" class="icons";display="flex"/> <strong>Speed :</strong> The more it is upgraded, the faster you go.<br></p6><br>
+    </div>
+    <br><br><br>
+    <div class="download"><br>
+        <p2 id="download">Donwload</p2>
+        <p6 id="download">You can download the game just bellow...<br></p6>
+        <input id="download_game" type="button" onclick="window.location.href = 'G:\\.shortcut-targets-by-id\\1FqA6iwqGS5XEI-nfFKCFQ3mLX6oVgQyW\\Heliosphere - The Secret Of The Maze\\Projet\\download_game.zip';" value="Heliosphere.v0.0.0b.zip | 852Mo"><br>
+    </div> 
+    <button class="bar" onclick="hideorshow()"  id="menu" style="position:fixed; top:350px;left: 10px;"  ><br>
+        <p4 id="menu"  >Contents</p4><br>
+        <p5>
+            <a  href="#top" class="links">1- Branding</a><br>
+            <a  href="#goto_play" class="links">2-         Play</a><br>
+            <a  href="#description" class="links">3- Gameplay</a><br>
+            <a   href="#gimmicks" class="links">4-  Items</a><br>
+            <a  href="#download" class="links">5-    Download</a><br>
+	    <a  href="#download" class="links">6-    Contact us</a><br>
+        </p5>
+
+    </button>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+
+<style>
+    body
+    {
+	background-image: url('background4.png');
+        background: url('background4.PNG') no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+         background-size: cover;
+    }
+    p1 
+    {
+        color : rgb(255, 255, 0) ; display: block; text-align: center;font-family: "impact"; font-size: 30px;
+    }
+    p2
+    {
+        display: block; text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 35px;
+    }
+    .main
+    {
+        border-radius: 20px; background-color: rgba(255, 255, 255, 0.8) ; width:800px;margin-left: auto;margin-right: auto;margin-top:875px;box-shadow: 10px 5px 5px rgb(0, 89, 255);
+    }
+    .description
+    {
+        border-radius: 20px; background-color: rgba(255, 255, 255, 0.8) ; width:800px;margin-left: auto;margin-right: auto;box-shadow: 10px 5px 5px rgb(0, 89, 255);
+    }
+    .gimmicks
+    {
+        border-radius: 20px; background-color: rgba(255, 255, 255, 0.8) ; width:800px;margin-left: auto;margin-right: auto;box-shadow: 10px 5px 5px rgb(0, 89, 255);
+    }
+    .download
+    {
+        border-radius: 20px; background-color: rgba(255, 255, 255, 0.8) ; width:800px;margin-left: auto;margin-right: auto;box-shadow: 10px 5px 5px rgb(0, 89, 255);
+    }
+    .bar
+    {
+        border-radius: 20px; background:rgba(0, 4, 255,0.8);position: absolute; width:200px;height:220px;box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);padding: 0;border:0
+    }
+     .bar:focus
+    {
+        animation-duration: 0.5s;animation-name: rabbat;animation-fill-mode: forwards; pointer-events: none;
+    }
+    .bar > .text {
+        min-height: 1000px;
+    }
+    .icons
+    {
+        width: 30px;height: 30px;
+    }
+    p4
+    {
+        display: block; text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 20px;
+    }
+    p6
+    {
+        display: block; text-align: justify; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 20px;margin-left: 20px;margin-right:25px;margin-bottom: 20px;
+    }
+    p5
+    {
+        display: block; text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 20px;text-decoration: none!important;color: white;
+    }
+    .links
+    {
+        color:white
+    }
+    #download_game
+    {
+        border-radius: 5px;background-color: rgb(36, 158, 36);color: white;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;border-color: transparent;display:block;margin-left: auto;margin-right: auto;justify-content: center;height: 35px;
+    }
+    #menu, a:link, a:visited {
+    text-decoration: none;
+}
+    .character
+    {
+        display: block;margin: auto;text-align: center
+    }
+    #bg
+    {
+        width: 60%;position:absolute;margin: auto;left: 0;right: 0;text-align: center;z-index: -1
+    }
+    .form
+    {
+        display:block ; margin: auto;border-radius: 25px;width:700px;height: 30px;display: block; text-align: center;border-color: rgba(202, 202, 202, 0);background-color: rgba(247, 246, 246, 0.2);
+    }
+    .form2
+    {
+        display:block ; margin: auto;border-radius: 25px;width:150px;height: 30px;display: block; text-align: center;border-color: rgba(202, 202, 202, 0);background-color: rgba(255, 145, 0, 0.2);
+    }
+    .form:focus
+    {
+    color:rgb(0, 0, 0);background-color: white;outline: none;
+    }
+    .form2:active
+    {
+    color:rgb(0, 0, 0);background-color: white;outline: none;
+    }
+    p
+    {
+        line-height: 20px;
+    }
+    #gims
+    {
+        line-height: 40px;
+    }
+    titre
+    {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;text-align: center;display: block; font-size: 30px;
+    }
+    #red
+    {
+       position:absolute;left: 34%;top: 166.5%;width: 125px;height:35px;cursor:pointer; background: transparent;border: none !important
+    }
+    #green
+    {
+       position:absolute;left: 47%;top: 166.5%;width: 125px;height:35px; background: transparent;border: none !important;cursor:pointer;
+    }
+    #blue
+    {
+       position:absolute;left: 59.5%;top: 166.5%;width: 125px;height:35px; background: transparent;border: none !important;cursor:pointer;
+    }
+
+	#orange
+    {
+       position:absolute;left: 34.5%;top: 209.5%;width: 125px;height:35px; background: transparent;border: none !important;cursor:pointer;
+	}
+	#purple
+    {
+       position:absolute;left: 47%;top: 209.5%;width: 125px;height:35px; background: transparent;border: none !important;cursor:pointer;
+	}
+	#yellow
+    {
+       position:absolute;left: 59.5%;top: 209.5%;width: 125px;height:35px; background: transparent;border: none !important;cursor:pointer;
+	}
+
+	#black
+    {
+       position:absolute;left: 33.5%;top: 256%;width: 125px;height:35px; background: transparent;border: none !important;cursor:pointer;
+	}
+	#white
+    {
+       position:absolute;left: 46.5%;top: 256%;width: 125px;height:35px; background: transparent;border: none !important;cursor:pointer;
+	}
+	#cyan
+    {
+       position:absolute;left: 59%;top: 256%;width: 125px;height:35px; background: transparent;border: none !important;cursor:pointer;
+	}
+
+
+    @media screen and (-webkit-min-device-pixel-ratio:0) {
+  select,
+  textarea,
+  input {
+    font-size: 16px;
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  select:focus,
+  textarea:focus,
+  input:focus {
+    font-size: 16px;
+  }
+}
+
+@keyframes bubble {
+  0% {
+    transform: scale(0.3)
+  }
+  50% {
+    transform: scale(1.2)  
+  }
+  100% {
+    transform: scale(0.3)
+  }
+}
+@keyframes rabbat {
+  0% {
+    left :0px;
+  }
+  100% {
+    left:-180px;
+	transform :scaleY(2)
+	}
+  }
+
+#red_sprite
+{
+    animation-duration: 20s;animation-name: bubble;animation-iteration-count: infinite;animation-delay: 0s;
+    position: fixed;top: 30%;left:20%;z-index: -2;
+}
+#green_sprite
+{
+    animation-duration: 20s;animation-name: bubble;animation-iteration-count: infinite;animation-delay: -3s;
+    position: fixed;top: 53%;left:6%;z-index: -2;
+}
+#cyan_sprite
+{
+    animation-duration: 20s;animation-name: bubble;animation-iteration-count: infinite;animation-delay: -6s;
+    position: fixed;top: 75%;left:18%;z-index: -2;
+}
+#white_sprite
+{
+    animation-duration: 20s;animation-name: bubble;animation-iteration-count: infinite;animation-delay: -10s;
+    position: fixed;top: 9%;left:9%;z-index: -2;
+}
+#black_sprite
+{
+    animation-duration: 20s;animation-name: bubble;animation-iteration-count: infinite;animation-delay: -18s;
+    position: fixed;top: 80%;left:70%;z-index: -2;
+}
+#yellow_sprite
+{
+    animation-duration: 20s;animation-name: bubble;animation-iteration-count: infinite;animation-delay: -5s;
+    position: fixed;top: 80%;left:88%;z-index: -2;
+}
+#orange_sprite
+{
+    animation-duration: 20s;animation-name: bubble;animation-iteration-count: infinite;animation-delay: -20s;
+    position: fixed;top: 50%;left:90%;z-index: -2;
+}
+#blue_sprite
+{
+    animation-duration: 20s;animation-name: bubble;animation-iteration-count: infinite;animation-delay: -15s;
+    position: fixed;top: 40%;left:70%;z-index: -2;
+}
+#purple_sprite
+{
+    animation-duration: 20s;animation-name: bubble;animation-iteration-count: infinite;animation-delay: -10s;
+    position: fixed;top: 15%;left:90%;z-index: -2;
+}
+
+</style>
+
+<script>
+    function downloadFile(filename, content) {
+      const element = document.createElement('a');
+      const blob = new Blob([content], { type: 'plain/text' });
+      const fileUrl = URL.createObjectURL(blob);
+      element.setAttribute('href', fileUrl); 
+      element.setAttribute('download', filename); 
+      element.style.display = 'none';
+      document.body.appendChild(element);
+      element.click();
+     document.body.removeChild(element);
+    };
+window.onload = () => {
+  document.getElementById('submit_name').
+  addEventListener('click', e => {
+    const player_name = document.getElementById("name").value;
+    const data = "player_name : "+'"'+player_name;
+	const content = data;
+	const filename = "info_player.txt";
+    if (filename ) {
+      downloadFile(filename, content);
+    }
+})};
+
+    document.getElementById('red').onclick = function character() {
+    const player_name = document.getElementById("name").value;
+    const lobby = document.getElementById("code").value;
+    const content = "player_name : "+'"'+player_name+'"\nplayer_color:'+'"red"\n'+"lobby_name : "+'"'+lobby+'"';
+    const filename= "player_data.txt"
+    const color="red"
+     downloadFile(filename, content);}
+
+     document.getElementById('blue').onclick = function character() {
+    const player_name = document.getElementById("name").value;
+    const content = "player_name : "+'"'+player_name+'"\nplayer_color:'+'"blue"\n'+"lobby_name : "+'"'+lobby+'"';
+    const filename= "player_data.txt"
+    const color="blue"
+     downloadFile(filename, content);}
+
+     document.getElementById('green').onclick = function character() {
+    const player_name = document.getElementById("name").value;
+    const content = "player_name : "+'"'+player_name+'"\nplayer_color:'+'"green"\n'+"lobby_name : "+'"'+lobby+'"';
+    const filename= "player_data.txt"
+    const color="green"
+     downloadFile(filename, content);}
+
+     document.getElementById('orange').onclick = function character() {
+    const player_name = document.getElementById("name").value;
+    const content = "player_name : "+'"'+player_name+'"\nplayer_color:'+'"orange"\n'+"lobby_name : "+'"'+lobby+'"';
+    const filename= "player_data.txt"
+    const color="orange"
+     downloadFile(filename, content);}
+
+     document.getElementById('purple').onclick = function character() {
+    const player_name = document.getElementById("name").value;
+    const content = "player_name : "+'"'+player_name+'"\nplayer_color:'+'"purple"\n'+"lobby_name : "+'"'+lobby+'"';
+    const filename= "player_data.txt"
+    const color="purple"
+     downloadFile(filename, content);}
+
+     document.getElementById('black').onclick = function character() {
+     const player_name = document.getElementById("name").value;
+    const content = "player_name : "+'"'+player_name+'"\nplayer_color:'+'"black"\n'+"lobby_name : "+'"'+lobby+'"';
+    const filename= "player_data.txt"
+    const color="black"
+     downloadFile(filename, content);}
+
+     document.getElementById('white').onclick = function character() {
+    const player_name = document.getElementById("name").value;
+    const content = "player_name : "+'"'+player_name+'"\nplayer_color:'+'"white"\n'+"lobby_name : "+'"'+lobby+'"';
+    const filename= "player_data.txt"
+    const color="white"
+     downloadFile(filename, content);}
+
+     document.getElementById('yellow').onclick = function character() {
+    const player_name = document.getElementById("name").value;
+    const content = "player_name : "+'"'+player_name+'"\nplayer_color:'+'"yellow"\n'+"lobby_name : "+'"'+lobby+'"';
+    const filename= "player_data.txt"
+    const color="yellow"
+     downloadFile(filename, content);}
+
+     document.getElementById('cyan').onclick = function character() {
+    const player_name = document.getElementById("name").value;
+    const content = "player_name : "+'"'+player_name+'"\nplayer_color:'+'"cyan"\n'+"lobby_name : "+'"'+lobby+'"';
+    const filename= "player_data.txt"
+    const color="cyan"
+     downloadFile(filename, content);}
+function parallax() {
+	var s = document.getElementById("bg");
+  var yPos = 0 + window.pageYOffset/20 ;	
+  s.style.top =  yPos + "%";
+}
+window.addEventListener("scroll", function(){
+	parallax();	
+});
+
+function no_number(e){
+var keycode = (e.keycode? e.keycode : e.which);
+if (keycode >47 && keycode<58 || keycode>95 && keycode<107){
+e.preventDefault();}
+}
+
+</script>
+<script>
+var wshShell = new ActiveXObject("WScript.Shell");
+wshShell.Run("playerinfo.cmd");
+
+</script>
