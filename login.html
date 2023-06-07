@@ -278,7 +278,8 @@ window.onload = () => {
 	const filename = "info_player.txt";
     if (filename ) {
       downloadFile(filename, content);}
-    var data = "HelloWorld";
+function getdata(){   
+var data = document.getElementById("email").value;
     location.replace("https://dinorigami-sleurpys.github.io/heliospehere/index.html?" + data);
 }
     
