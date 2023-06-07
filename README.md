@@ -1,2 +1,2 @@
-# heliospehere realiser par Basley Louis et Rouvier Matis 
-sous licence copyright
+# Heliosphere -- By Mathis Dinorigami and Sleurpy
+under Copyright Liscense
