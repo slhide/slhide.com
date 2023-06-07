@@ -17,7 +17,7 @@
     <br><br><br><div class="main"><br><div id="goto_play"></div><br><br>
         <info>
             <p2 id="play">PLAY</p2><br>
-            <p3><input type="text" onload="fill_name" autocomplete="off" placeholder="Enter your player name ..." id="name" class="form"/><br></p3>
+            <p3><input type="text" onload="fill_name()" autocomplete="off" placeholder="Enter your player name ..." id="name" class="form"/><br></p3>
             <p3><input type="text" autocomplete="off" placeholder="Enter the code of the lobby you want to join ..." id="code" class="form" pattern="A-Za-z" maxlength="15" onkeydown="no_number(event)" onkeyup="
                 var start = this.selectionStart;
                 var end = this.selectionEnd;
