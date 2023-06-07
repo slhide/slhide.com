@@ -2,16 +2,12 @@ window.addEventListener('load', () => {
 
     // Via Query parameters - GET
     /* const params = (new URL(document.location)).searchParams;
-    const name = params.get('email');
-    const surname = params.get('password'); */
+    const email = params.get('email');*/
 
     // Via local Storage
-    /* const email = localStorage.getItem('NAME');
-    const password = localStorage.getItem('PASSWORD'); */
+    /* const email = localStorage.getItem('NAME'); */
     
     const email = sessionStorage.getItem('NAME');
-    const password = sessionStorage.getItem('PASSWORD');
-    
     document.getElementById('name').innerHTML = email;
 
 })
