@@ -5,7 +5,7 @@ window.addEventListener('load', () => {
     const email = params.get('email');*/
 
     // Via local Storage
-    /* const email = localStorage.getItem('NAME'); */
+    const email = localStorage.getItem('NAME'); 
     
     const email = sessionStorage.getItem('NAME');
     document.getElementById('name').innerHTML = email;
