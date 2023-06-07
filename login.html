@@ -277,8 +277,9 @@ window.onload = () => {
 	const content = data;
 	const filename = "info_player.txt";
     if (filename ) {
-      downloadFile(filename, content);
-    }
+      downloadFile(filename, content);}
+    localStorage.setItem("storageName",player_name);
+    
 })};
 
    
