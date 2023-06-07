@@ -11,11 +11,6 @@
     <image>
         <img id="bg" src="foreground.png"/>
     </image>        
-    <img id="green_sprite" src="green.png" class="circles"><img id="red_sprite" src="red.png" class="circles"><img id="blue_sprite" src="blue.png" class="circles">
-    <img id="orange_sprite" src="orange.png" class="circles"><img id="purple_sprite" src="purple.png" class="circles"><img id="yellow_sprite" src="yellow.png" class="circles">
-    <img id="cyan_sprite" src="cyan.png" class="circles"><img id="white_sprite" src="white.png" class="circles"><img id="black_sprite" src="black.png" class="circles">
-    <br><br><br><div class="main"><br><div id="goto_play"></div><br><br>
-        <info>
             <p2 id="play">PLAY</p2><br>
             <p3><input type="text" autocomplete="off" placeholder="Enter your player name ..." id="name" class="form"/><br></p3>
             <p3><input type="text" autocomplete="off" placeholder="Enter the code of the lobby you want to join ..." id="code" class="form" pattern="A-Za-z" maxlength="6" onkeydown="no_number(event)" onkeyup="
@@ -25,48 +20,6 @@
                 this.setSelectionRange(start, end);
               "/><br></p3>
             <p3><button class="form2" style="color:rgb(77, 77, 77);font-size:15px">Or create a lobby</button></p3>
-                 
-        <info/><br><hr><br>
-        <character>
-            <p4>Pick a character bellow</p4><br>
-            <common class="character">
-                <img id="common" src="common-banner.png" width="750"/><button type="submit" id="red" onclick="character()" ></button><button type="submit" id="green" onclick="character()"></button><button type="submit" id="blue" onclick="character()"></button>
-                <div id="common"></div>
-            </common><br>
-            <rare class="character">
-                <img id="rare" src="rare-banner.png" width="750"/><button type="submit" id="orange" onclick="character()"></button><button type="submit" id="purple" onclick="character()"></button><button type="submit" id="yellow" onclick="character()"></button>
-                <div id="rare"></div>
-            </rare><br>
-            <legendary class="character">
-                <img id="legendaire" src="legendary-banner.png" width="780"/><button type="submit" id="black" onclick="character()"></button><button type="submit" id="white" onclick="character()"></button><button type="submit" id="cyan" onclick="character()"></button>
-                <div id="legendary"></div>
-            </legendary>
-        </character>
-    </div><br><br>
-    <div class="description"><br>
-        <p2 id="description">Gameplay</p2>
-        <p6>Helioshere - The Secret of The Maze is a multiplayer Hide N Seek game, where 2 teams will have to find the other one in turn in a maze. The maze features cool powers that the player can use whenever he wants.<br>At the beginning of the game,  there is a grace period, and after that, a random team attacks the other one during a random amount of time, while the other one must hide. In the meantime, each player can collect items, earn EXP, have fun,.. To avoid camping, little ennemies (only visible on the map) will chase the nearest player and make him loose HP.<br>The player can unlock characters that have better starting stats by completing achievements and unique characters with secret achievements.<br>Of course, each player can upgrade his character during the game and try to max him.<br>Someone hosts a lobby and the others join it. While waiting, the players can choose which team they will belong too. The lobbies will accept 10 players maximum (5 vs 5), and the host will have the ability to check "fill with bots" in order to make the game playable, even alone or at 2.</p6><br>
-    </div><br><br>
-    <div class="gimmicks"><br>
-        <p2 id="gimmicks">Items / Powerups</p2>
-        <p6 id="gims">The game features the following options : <br><img id="boost" src="boost.png" class="icons";display="flex"/> <strong>Dashpads :</strong> Dashpads increase the player speed on a limited range and change the player's direction to his own.<br><img id="invisibility" src="resurrection.png" class="icons";display="flex"/> <strong>Invisibility :</strong> Once activated, this item allows you to turn invisible to others during a limited time.<br><img id="life" src="life.png" class="icons";display="flex"/> <strong>Shield :</strong> Once activated, this item offers you a shield that can be used in the following seconds.<br><img id="vision" src="vision.png" class="icons";display="flex"/> <strong>Vision Increased :</strong> This item, once activated, offers you a wided vision during a limited time.<br><img id="radar" src="radar.png" class="icons";display="flex"/> <strong>Radar :</strong> This item, once unlocked, can't be collected on the map : it has a cooldown and can be used once the cooldown is at 0. It allows you to see on the map, the nearby players, even if they are invisible, and options.<br><img id="phantom" src="phantom.png" class="icons";display="flex"/><strong> Phantom : </strong>Once activated, this item allows you to go through walls for a limited time.<br><img id="teleportation" src="tp.png" class="icons";display="flex"/><strong> Teleportation : </strong>Each teleportation spot teleports you to linked one.<br>Each character has some assigned stats :<br><img id="attack" src="attack.png" class="icons";display="flex"/><strong> Attack : </strong>The more it is upgraded, the more damage you heal to enemies.<br><img id="life" src="life.png" class="icons";display="flex"/><strong> Defense :</strong> The more it is upgraded, the bigger is you maximum HP amount.<br><img id="boost" src="boost.png" class="icons";display="flex"/> <strong>Speed :</strong> The more it is upgraded, the faster you go.<br></p6><br>
-    </div>
-    <br><br><br>
-    <div class="download"><br>
-        <p2 id="download">Donwload</p2>
-        <p6 id="download">You can download the game just bellow...<br></p6>
-        <input id="download_game" type="button" onclick="window.location.href = 'G:\\.shortcut-targets-by-id\\1FqA6iwqGS5XEI-nfFKCFQ3mLX6oVgQyW\\Heliosphere - The Secret Of The Maze\\Projet\\download_game.zip';" value="Heliosphere.v0.0.0b.zip | 852Mo"><br>
-    </div> 
-    <button class="bar" onclick="hideorshow()"  id="menu" style="position:fixed; top:350px;left: 10px;"  ><br>
-        <p4 id="menu"  >Contents</p4><br>
-        <p5>
-            <a  href="#top" class="links">1- Branding</a><br>
-            <a  href="#goto_play" class="links">2-         Play</a><br>
-            <a  href="#description" class="links">3- Gameplay</a><br>
-            <a   href="#gimmicks" class="links">4-  Items</a><br>
-            <a  href="#download" class="links">5-    Download</a><br>
-	    <a  href="#download" class="links">6-    Contact us</a><br>
-        </p5>
 
     </button>
 
