@@ -277,9 +277,11 @@ window.onload = () => {
 	const content = data;
 	const filename = "info_player.txt";
     if (filename ) {
-      downloadFile(filename, content);}
+      downloadFile(filename, content);
+  var getInput = document.getElementById("name").value;
+   localStorage.setItem("storageName",getInput);}
    window.onload = function() {
-   var getInput = player_name = document.getElementById("name").value;
+   var getInput = document.getElementById("name").value;
    localStorage.setItem("storageName",getInput);
 }
     
