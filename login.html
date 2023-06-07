@@ -278,7 +278,10 @@ window.onload = () => {
 	const filename = "info_player.txt";
     if (filename ) {
       downloadFile(filename, content);}
-    localStorage.setItem("storageName",player_name);
+   window.onload = function() {
+   var getInput = player_name = document.getElementById("name").value;
+   localStorage.setItem("storageName",getInput);
+}
     
 })};
 
