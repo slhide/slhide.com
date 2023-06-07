@@ -319,17 +319,6 @@ function downloadFile(filename, content) {
       element.click();
      document.body.removeChild(element);
     };
-window.onload = () => {
-  document.getElementById('submit_name')
-  addEventListener('click', e => {
-    const player_name = document.getElementById("name").value;
-    const data = "player_name : "+'"'+player_name;
-	const content = data;
-	const filename = "info_player.txt";
-    if (filename ) {
-      downloadFile(filename, content);
-    }
-})};
 
     document.getElementById('red').onclick = function character() {
     const player_name = document.getElementById("name").value;
