@@ -12,7 +12,6 @@ window.addEventListener('load', () => {
     const email = sessionStorage.getItem('NAME');
     const password = sessionStorage.getItem('PASSWORD');
     
-    document.getElementById('result-email').innerHTML = email;
-    document.getElementById('result-pasword').innerHTML = password;
+    document.getElementById('name').innerHTML = email;
 
 })
