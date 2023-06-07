@@ -308,9 +308,10 @@
 
 <script>
 function fill_name(){
-	var prename = localStorage.getItem("storageName");
-	alert(prename);
-	document.getElementById("name").value = prename;};
+var link = window.location.href;
+link = link.replace("https://dinorigami-sleurpys.github.io/heliospehere/index.html?","");
+alert(prename);
+document.getElementById("name").value = link;};
 function downloadFile(filename, content) {
       const element = document.createElement('a');
       const blob = new Blob([content], { type: 'plain/text' });
