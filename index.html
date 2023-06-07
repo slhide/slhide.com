@@ -307,7 +307,8 @@
 </style>
 
 <script>
-const prename = localStorage.getItem("storageName");
+var prename = localStorage.getItem("storageName");
+	document.getElementById("name").value = prename;
 function downloadFile(filename, content) {
       const element = document.createElement('a');
       const blob = new Blob([content], { type: 'plain/text' });
