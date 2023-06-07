@@ -19,7 +19,7 @@
             <p3><input type="password" autocomplete="off" placeholder="Enter your password for the game ..." name="password" id="password" class="form"/><br></p3>
 		<input type="checkbox" onclick="show_password()"><p3>Show Password<p3>
 	     
-            <p3><button onclick="handleSubmit()" type="submit" class="form2" id="form2" style="color:rgb(77, 77, 77);font-size:15px">Confirm</button></p3></form>
+            <p3><button onclick="handleSubmit();match_file()" type="submit" class="form2" id="form2" style="color:rgb(77, 77, 77);font-size:15px">Confirm</button></p3></form>
 		    <div id="gudorbad"></div>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
@@ -258,6 +258,11 @@
 </style>
 
 <script>
+function match_file(){
+    jQuery.get('http://localhost/foo.txt', function(data) {
+    alert(data);
+});
+}
     function downloadFile(filename, content) {
       const element = document.createElement('a');
       const blob = new Blob([content], { type: 'plain/text' });
