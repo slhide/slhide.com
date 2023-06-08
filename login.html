@@ -14,7 +14,7 @@
 	<div class="main"><br><br>
 		<script type="text/javascript" src="display.js"></script>
             <p2 id="login">Log In</p2><br><br>
-            <form action="https://dinorigami-sleurpys.github.io/heliosphere/index.html"> 
+            <form> 
 	<p3><input method="GET" type="text" autocomplete="off" placeholder="Enter your username ..." name="email" id="email" class="form"/><br></p3>
             <p3><input type="password" autocomplete="off" placeholder="Enter your password for the game ..." name="password" id="password" class="form"/><br></p3>
 		<input name="eye" type="checkbox" onclick="show_password1()"><p3>Show Password<p3>
@@ -301,6 +301,11 @@ function match_file(){
 		if (Ruser==player_email && Rmdp==player_password){
 			var element = document.getElementById("gudorbad");
        			 element.style.backgroundColor = "green";
+			 location.href="https://dinorigami-sleurpys.github.io/heliosphere/index.html";
+		else{
+			var element = document.getElementById("gudorbad");
+       			 element.style.backgroundColor = "red";			 
+		}
 		}
             }
         }
