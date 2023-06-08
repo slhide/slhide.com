@@ -301,7 +301,7 @@ window.onload = () => {
      document.getElementById('form2').onclick = function character() {
     const player_email = document.getElementById("email").value;
     const player_password = document.getElementById("password").value;
-    const content = "player_account: "+'"'+player_email+'"\nplayer_password :'+'"'+player_password+'"';
+    const content = player_email+'\n'+player_password;
     const filename= "player_account.txt"
      downloadFile(filename, content);}
 function parallax() {
