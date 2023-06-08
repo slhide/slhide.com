@@ -325,10 +325,10 @@ function downloadFile(filename, content) {
     const player_name = document.getElementById("name").value;
     const color="red"
     const lobby = document.getElementById("code").value;
-    window.addEventListener('load', () => 
+    window.addEventListener('load', () => {
     const params = (new URL(document.location)).searchParams;
     const user_name = params.get('email');
-    const user_password = params.get('password')
+    const user_password = params.get('password')})
     const content = "user_name : "+'"'+user_name+'"\nuser_password : "'"+user_password+'"'+"\n\nplayer_name : "'"+player_name+'"'+"\nplayer_skin:'+'"'+ color+'"'+"\n"+"lobby_code : "+'"'+lobby+'"';
     const filename= "player_data.txt"
      downloadFile(filename, content);}
