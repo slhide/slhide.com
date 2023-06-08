@@ -294,8 +294,14 @@ function match_file(){
             if( client.responseText != '' )
             {
                 var txt = client.responseText.split("\n");
-                document.getElementById("line1").innerHTML = txt[0];
-                document.getElementById("line3").innerHTML = txt[2];
+                const Ruser = txt[0];
+                const Rmdp = txt[2];
+		const player_email = document.getElementById("email2").value;
+    		const player_password = document.getElementById("password2").value;
+		if (Ruser==player_email && Rmdp==player_password){
+			var element = document.getElementById("myDiv");
+       			 element.style.backgroundColor = "";
+		}
             }
         }
         client.send();
