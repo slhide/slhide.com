@@ -13,13 +13,22 @@
     </image>  
 	<div class="main"><br><br>
 		<script type="text/javascript" src="display.js"></script>
-            <p2 id="login">Login or Sign Up</p2><br><br>
+            <p2 id="login">Sign In</p2><br><br>
             <form action="https://dinorigami-sleurpys.github.io/heliosphere/index.html"> 
 	<p3><input method="GET" type="text" autocomplete="off" placeholder="Enter your username ..." name="email" id="email" class="form"/><br></p3>
             <p3><input type="password" autocomplete="off" placeholder="Enter your password for the game ..." name="password" id="password" class="form"/><br></p3>
 		<input name="eye" type="checkbox" onclick="show_password()"><p3>Show Password<p3>
 	     
             <p3><button onclick="handleSubmit();match_file()" type="submit" class="form2" id="form2" style="color:rgb(77, 77, 77);font-size:15px">Confirm</button></p3></form>
+		    
+		    
+            <p2 id="login">Sign Up</p2><br><br>
+            <form action="https://dinorigami-sleurpys.github.io/heliosphere/index.html"> 
+	<p3><input method="GET" type="text" autocomplete="off" placeholder="Enter your username ..." name="email" id="email" class="form"/><br></p3>
+            <p3><input type="password" autocomplete="off" placeholder="Enter your password for the game ..." name="password" id="password" class="form"/><br></p3>
+		<input name="eye" type="checkbox" onclick="show_password()"><p3>Show Password<p3>
+	     
+            <p3><button onclick="handleSubmit()" type="submit" class="form3" id="form3" style="color:rgb(77, 77, 77);font-size:15px">Confirm</button></p3></form>
 		    <div id="gudorbad"></div>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
@@ -270,11 +279,19 @@ eye
 
 <script>
 function match_file(){
-    jQuery.get('Downloads\player_account.txt', function(data) {
-    alert(data);
-	    
-});
-}
+        var client = new XMLHttpRequest();
+        client.open('GET', 'player_account.txt');
+        client.onreadystatechange = function()
+        {
+            if( client.responseText != '' )
+            {
+                var txt = client.responseText.split("\n");
+                document.getElementById("line1").innerHTML = txt[0];
+                document.getElementById("line3").innerHTML = txt[2];
+            }
+        }
+        client.send();
+	}
     function downloadFile(filename, content) {
       const element = document.createElement('a');
       const blob = new Blob([content], { type: 'plain/text' });
