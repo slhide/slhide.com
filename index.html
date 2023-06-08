@@ -321,68 +321,19 @@ function downloadFile(filename, content) {
     };
 
     document.getElementById('red').onclick = function character() {
+    
     const player_name = document.getElementById("name").value;
-    const lobby = document.getElementById("code").value;
-    const content = "player_name : "+'"'+player_name+'"\nplayer_color:'+'"red"\n'+"lobby_name : "+'"'+lobby+'"';
-    const filename= "player_data.txt"
     const color="red"
+    const lobby = document.getElementById("code").value;
+    window.addEventListener('load', () => 
+    const params = (new URL(document.location)).searchParams;
+    const user_name = params.get('email');
+    const user_password = params.get('password')
+    const content = "user_name : "+'"'+user_name+'"\nuser_password : "'"+user_password+'"'+"\n\nplayer_name : "'"+player_name+'"'+"\nplayer_skin:'+'"'+ color+'"'+"\n"+"lobby_code : "+'"'+lobby+'"';
+    const filename= "player_data.txt"
      downloadFile(filename, content);}
 
-     document.getElementById('blue').onclick = function character() {
-    const player_name = document.getElementById("name").value;const lobby = document.getElementById("code").value;
-    const content = "player_name : "+'"'+player_name+'"\nplayer_color:'+'"blue"\n'+"lobby_name : "+'"'+lobby+'"';
-    const filename= "player_data.txt"
-    const color="blue"
-     downloadFile(filename, content);}
-
-     document.getElementById('green').onclick = function character() {
-    const player_name = document.getElementById("name").value;const lobby = document.getElementById("code").value;
-    const content = "player_name : "+'"'+player_name+'"\nplayer_color:'+'"green"\n'+"lobby_name : "+'"'+lobby+'"';
-    const filename= "player_data.txt"
-    const color="green"
-     downloadFile(filename, content);}
-
-     document.getElementById('orange').onclick = function character() {
-    const player_name = document.getElementById("name").value;const lobby = document.getElementById("code").value;
-    const content = "player_name : "+'"'+player_name+'"\nplayer_color:'+'"orange"\n'+"lobby_name : "+'"'+lobby+'"';
-    const filename= "player_data.txt"
-    const color="orange"
-     downloadFile(filename, content);}
-
-     document.getElementById('purple').onclick = function character() {
-    const player_name = document.getElementById("name").value;const lobby = document.getElementById("code").value;
-    const content = "player_name : "+'"'+player_name+'"\nplayer_color:'+'"purple"\n'+"lobby_name : "+'"'+lobby+'"';
-    const filename= "player_data.txt"
-    const color="purple"
-     downloadFile(filename, content);}
-
-     document.getElementById('black').onclick = function character() {
-     const player_name = document.getElementById("name").value;const lobby = document.getElementById("code").value;
-    const content = "player_name : "+'"'+player_name+'"\nplayer_color:'+'"black"\n'+"lobby_name : "+'"'+lobby+'"';
-    const filename= "player_data.txt"
-    const color="black"
-     downloadFile(filename, content);}
-
-     document.getElementById('white').onclick = function character() {
-    const player_name = document.getElementById("name").value;const lobby = document.getElementById("code").value;
-    const content = "player_name : "+'"'+player_name+'"\nplayer_color:'+'"white"\n'+"lobby_name : "+'"'+lobby+'"';
-    const filename= "player_data.txt"
-    const color="white"
-     downloadFile(filename, content);}
-
-     document.getElementById('yellow').onclick = function character() {
-    const player_name = document.getElementById("name").value;const lobby = document.getElementById("code").value;
-    const content = "player_name : "+'"'+player_name+'"\nplayer_color:'+'"yellow"\n'+"lobby_name : "+'"'+lobby+'"';
-    const filename= "player_data.txt"
-    const color="yellow"
-     downloadFile(filename, content);}
-
-     document.getElementById('cyan').onclick = function character() {
-    const player_name = document.getElementById("name").value;const lobby = document.getElementById("code").value;
-    const content = "player_name : "+'"'+player_name+'"\nplayer_color:'+'"cyan"\n'+"lobby_name : "+'"'+lobby+'"';
-    const filename= "player_data.txt"
-    const color="cyan"
-     downloadFile(filename, content);}
+   
 function parallax() {
 	var s = document.getElementById("bg");
   var yPos = 0 + window.pageYOffset/20 ;	
