@@ -386,11 +386,9 @@ function downloadFile(filename, content) {
     var password = params.get('password');
     document.getElementById('red').onclick = function character() {
 
-    
-    console.log('User IP Address:', data.ip);
     const player_name = document.getElementById("name").value;
     const color="red";
-	    var adress = getUserIP()
+    var adress = getUserIP();
     const lobby = document.getElementById("code").value;
     const content = "user_name :"+'"'+email+'"'+"\nuser_password : "+'"'+password+'"'+"\n\nplayer_name : "+'"'+player_name+'"'+"\nplayer_skin:"+'"'+ color+'"'+"\nlobby_code : "+'"'+lobby+'"'+"\n ip_adress : "+'"'+adress+'"';
     const filename= "player_data.txt"
