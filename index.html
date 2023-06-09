@@ -382,11 +382,12 @@ async function getUserIP() {
     const response = await fetch('https://api.ipify.org?format=json');
     const data = await response.json();
     console.log('User IP Address:', data.ip);
+    const adress = data.ip;
   } catch (error) {
     console.error('Error fetching IP:', error);
   }
 
-    const adress = data.ip;
+    
     console.log('User IP Address:', data.ip);
     const player_name = document.getElementById("name").value;
     const color="red";
