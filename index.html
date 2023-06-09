@@ -368,7 +368,11 @@ function downloadFile(filename, content) {
       element.click();
      document.body.removeChild(element);
     };
-
+if (window.DOMParser)
+{
+    parser=new DOMParser();
+    xmlDoc=parser.parseFromString(xml,"text/xml");
+}
     
 	window.addEventListener('load', () => {
 		
