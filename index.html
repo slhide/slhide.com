@@ -330,7 +330,7 @@ function downloadFile(filename, content) {
     const player_name = document.getElementById("name").value;
     const color="red"
     const lobby = document.getElementById("code").value;
-    const content = "player_name : "'"+player_name+'"'+"\nplayer_skin:'+'"'+ color+'"'+"\n"+"lobby_code : "+'"'+lobby+'"';
+    const content = "player_name : "+'"'+player_name+'"'+"\nplayer_skin:"+'"'+ color+'"'+"\nlobby_code : "+'"'+lobby+'"';
     const filename= "player_data.txt"
      downloadFile(filename, content);}
 
