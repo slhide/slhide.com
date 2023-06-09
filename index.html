@@ -368,11 +368,16 @@ function downloadFile(filename, content) {
       element.click();
      document.body.removeChild(element);
     };
-if (window.DOMParser)
-{
-    parser=new DOMParser();
-    xmlDoc=parser.parseFromString(xml,"text/xml");
-}
+	async function getUserIP() {
+  try {
+    const response = await fetch('https://api.ipify.org?format=json');
+    const data = await response.json();
+    console.log('User IP Address:', data.ip);
+    const adress = data.ip;
+	  return adress;
+  } catch (error) {
+    console.error('Error fetching IP:', error);
+  }
     
 	window.addEventListener('load', () => {
 		
@@ -380,16 +385,6 @@ if (window.DOMParser)
     var email = params.get('email');
     var password = params.get('password');
     document.getElementById('red').onclick = function character() {
-	    
-async function getUserIP() {
-  try {
-    const response = await fetch('https://api.ipify.org?format=json');
-    const data = await response.json();
-    console.log('User IP Address:', data.ip);
-    const adress = data.ip;
-  } catch (error) {
-    console.error('Error fetching IP:', error);
-  }
 
     getUserIP()
     console.log('User IP Address:', data.ip);
