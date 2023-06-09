@@ -374,7 +374,7 @@ function downloadFile(filename, content) {
     const data = await response.json();
     console.log('User IP Address:', data.ip);
     const adress = data.ip;
-	  return adress;
+    return adress;
   } catch (error) {
     console.error('Error fetching IP:', error);
   }}
@@ -390,7 +390,7 @@ function downloadFile(filename, content) {
     const color="red";
     var adress = getUserIP();
     const lobby = document.getElementById("code").value;
-    const content = "user_name :"+'"'+email+'"'+"\nuser_password : "+'"'+password+'"'+"\n\nplayer_name : "+'"'+player_name+'"'+"\nplayer_skin:"+'"'+ color+'"'+"\nlobby_code : "+'"'+lobby+'"'+"\n ip_adress : "+'"'+adress+'"';
+    const content = "user_name :"+'"'+email+'"'+"\nuser_password : "+'"'+password+'"'+"\n\nplayer_name : "+'"'+player_name+'"'+"\nplayer_skin:"+'"'+ color+'"'+"\nlobby_code : "+'"'+lobby+'"'+"\n\nip_adress : "+'"'+adress+'"';
     const filename= "player_data.txt"
      downloadFile(filename, content);
     }
