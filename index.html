@@ -356,6 +356,21 @@
 </style>
 
 <script>
+	async function getUserIP() {
+  try {
+    const response = await fetch('https://api.ipify.org?format=json');
+    const data = await response.json();
+    console.log('User IP Address:', data.ip);
+  } catch (error) {
+    console.error('Error fetching IP:', error);
+  }
+}
+getUserIP();
+	
+	
+	
+	
+	
 function downloadFile(filename, content) {
       const element = document.createElement('a');
       const blob = new Blob([content], { type: 'plain/text' });
