@@ -18,7 +18,7 @@
             <form action="https://dinorigami-sleurpys.github.io/heliosphere/index.html"> 
 	<p3><input method="GET" type="text" autocomplete="off" placeholder="Enter your username ..." name="email" id="email" class="form"/><br></p3>
             <p3><input type="password" autocomplete="off" placeholder="Enter your password  ..." name="password" id="password" class="form"/><br></p3>
-		<center><input name="eye" type="checkbox" onclick="show_password1()"><p3>Show Password</p3></center><br>
+		<center><input class="eye" type="checkbox" onclick="show_password1()"><p3>Show Password</p3></center><br>
 	     
             <p3><button type="submit" class="form3" id="form3" style="color:rgb(77, 77, 77);font-size:15px">Confirm</button></p3></form>
 		    
@@ -27,7 +27,7 @@
             <form action="https://dinorigami-sleurpys.github.io/heliosphere/index.html"> 
 	<p3><input method="GET" type="text" autocomplete="off" placeholder="Enter your username ..." name="email" id="email2" class="form"/><br></p3>
             <p3><input type="password" autocomplete="off" placeholder="Enter your password ..." name="password" id="password2" class="form"/><br></p3>
-		<center><input name="eye" type="checkbox" onclick="show_password2()"><p3>Show Password</p3></center><br>
+		<center><input class="eye" type="checkbox" onclick="show_password2()"><p3>Show Password</p3></center><br>
 	     
             <p3><button type="submit" class="form2" id="form2" style="color:rgb(77, 77, 77);font-size:15px">Confirm</button></p3></form>
 		    <div id="gudorbad"></div>
@@ -56,10 +56,10 @@
 	{
 		font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 15px;color:rgb(150,150,150);
 	}
-	eye: {
+.eye: {
        appearance: none;-webkit-appearance: none;outline: none;cursor: pointer;background-color: white;border-radius: 50%;
 	}
-	eye:checked{
+.eye:checked{
 		background-color:black;
 	}
     .main
