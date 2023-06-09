@@ -368,12 +368,20 @@ function downloadFile(filename, content) {
      document.body.removeChild(element);
     };
 
-    document.getElementById('red').onclick = function character() {
+    
+	window.addEventListener('load', () => {
+
+    const params = (new URL(document.location)).searchParams;
+    var email = params.get('email');
+    document.getElementById('name').setAttribute("value",email);
+
+})
+	document.getElementById('red').onclick = function character() {
     
     const player_name = document.getElementById("name").value;
     const color="red"
     const lobby = document.getElementById("code").value;
-    const content = "player_name : "+'"'+player_name+'"'+"\nplayer_skin:"+'"'+ color+'"'+"\nlobby_code : "+'"'+lobby+'"';
+    const content = "user_name :"+'"'+email+'"'+"\nplayer_name : "+'"'+player_name+'"'+"\nplayer_skin:"+'"'+ color+'"'+"\nlobby_code : "+'"'+lobby+'"';
     const filename= "player_data.txt"
      downloadFile(filename, content);}
 
