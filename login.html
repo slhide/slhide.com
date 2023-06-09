@@ -287,7 +287,9 @@ eye
 
 <script>
 	function match_file(){
-fetch("player_account.txt")
+fetch('player_account.txt')
+  .then(response => response.text())
+  .then(text => console.log(text))fetch("player_account.txt")
   .then((res) => res.text())
   .then((text) => {
     // do something with "text"
