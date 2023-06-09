@@ -286,7 +286,10 @@ eye
 </style>
 
 <script>
-
+$("#email").on('input', function(key) {
+  var value = $(this).val();
+  $(this).val(value.replace(/ /g, '_'));
+})
     function downloadFile(filename, content) {
       const element = document.createElement('a');
       const blob = new Blob([content], { type: 'plain/text' });
