@@ -1,5 +1,5 @@
 # -- Heliosphere : The Secret of the Maze -- 
- ***By Dinorigami and Sleurpy***\
+ ***By Dinorigami and Sleurpys***\
 *under Copyright Liscense*\
 **Helioshere** ***- The Secret of The Maze*** is a multiplayer Hide N Seek game, where 2 teams will have to find the other one in turn in a maze. The maze features cool powers that the player can use whenever he wants.
 At the beginning of the game, there is a grace period, and after that, a random team attacks the other one during a random amount of time, while the other one must hide. In the meantime, each player can collect items, earn EXP, have fun,.. To avoid camping, little ennemies (only visible on the map) will chase the nearest player and make him loose HP.
