@@ -374,7 +374,7 @@ function downloadFile(filename, content) {
     const data = await response.json();
     const adress = data.ip;
     console.log(data.ip);
-    return adress;
+    return data.ip;
     }
     
 	window.addEventListener('load', () => {
