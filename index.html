@@ -377,18 +377,14 @@ function downloadFile(filename, content) {
     document.getElementById('red').onclick = function character() {
    	const player_name = document.getElementById("name").value;
     	const color="red";
-	const http = require('http');
-	http.createServer(function (req, res) {
-  	req.socket.remoteAddress;
-	res.end();
-	}).listen(3000);
-        
-	 
+	 fetch('https://api.ipify.org?format=json')
+        .then(response => response.json())
+        .then(data => console.log(data.ip));
     	const lobby = document.getElementById("code").value;
 	const content = "user_name :"+'"'+email+'"'+"\nuser_password : "+'"'+password+'"'+"\n\nplayer_name : "+'"'+player_name+'"'+"\nplayer_skin:"+'"'+ color+'"'+"\nlobby_code : "+'"'+lobby+'"'+"\n\nip_adress : "+'"'+http+'"';
     	const filename= "player_data.txt";
      	downloadFile(filename, content);
-		 }, "json")
+		 
     }
 })
    
