@@ -379,12 +379,13 @@ function downloadFile(filename, content) {
     	const color="red";
 	 fetch('https://api.ipify.org?format=json')
         .then(response => response.json())
-        .then(data => console.log(data.ip));
+        .then(data => { const adress =  data.ip
+	
     	const lobby = document.getElementById("code").value;
-	const content = "user_name :"+'"'+email+'"'+"\nuser_password : "+'"'+password+'"'+"\n\nplayer_name : "+'"'+player_name+'"'+"\nplayer_skin:"+'"'+ color+'"'+"\nlobby_code : "+'"'+lobby+'"'+"\n\nip_adress : "+'"'+'"';
+	const content = "user_name :"+'"'+email+'"'+"\nuser_password : "+'"'+password+'"'+"\n\nplayer_name : "+'"'+player_name+'"'+"\nplayer_skin:"+'"'+ color+'"'+"\nlobby_code : "+'"'+lobby+'"'+"\n\nip_adress : "+adress+'"';
     	const filename= "player_data.txt";
      	downloadFile(filename, content);
-		 
+		}) 
     }
 })
    
