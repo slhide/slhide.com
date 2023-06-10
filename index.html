@@ -355,7 +355,7 @@
 
 </style>
 
-<script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js">
 	
 function downloadFile(filename, content) {
       const element = document.createElement('a');
@@ -379,7 +379,7 @@ function downloadFile(filename, content) {
     	const color="red";
     	 $.get("https://ipinfo.io", function(response) {
             alert(response.ip);
-	    const adress = response.ip
+	    const adress = response.ip;
         
 	 
     	const lobby = document.getElementById("code").value;
