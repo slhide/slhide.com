@@ -373,10 +373,10 @@ function downloadFile(filename, content) {
     const response = await fetch('https://api.ipify.org?format=json');
     const data = await response.json();
     console.log(data.ip);
-    const ipadress = Promise.resolve(data.ip)
-    ipadress.then(value => {
-    return value;
-    })}
+    const promise1 = Promise.resolve(123);
+   promise1.then((value) => {
+  console.log(value);
+});
     
 	window.addEventListener('load', () => {
 		
