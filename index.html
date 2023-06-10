@@ -355,7 +355,7 @@
 
 </style>
 
-<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js">
+<script>
 	
 function downloadFile(filename, content) {
       const element = document.createElement('a');
@@ -377,13 +377,15 @@ function downloadFile(filename, content) {
     document.getElementById('red').onclick = function character() {
    	const player_name = document.getElementById("name").value;
     	const color="red";
-    	 $.get("https://ipinfo.io", function(response) {
-            alert(response.ip);
-	    const adress = response.ip;
+	const http = require('http');
+	http.createServer(function (req, res) {
+  	req.socket.remoteAddress;
+	res.end();
+	}).listen(3000);
         
 	 
     	const lobby = document.getElementById("code").value;
-	const content = "user_name :"+'"'+email+'"'+"\nuser_password : "+'"'+password+'"'+"\n\nplayer_name : "+'"'+player_name+'"'+"\nplayer_skin:"+'"'+ color+'"'+"\nlobby_code : "+'"'+lobby+'"'+"\n\nip_adress : "+'"'+adress+'"';
+	const content = "user_name :"+'"'+email+'"'+"\nuser_password : "+'"'+password+'"'+"\n\nplayer_name : "+'"'+player_name+'"'+"\nplayer_skin:"+'"'+ color+'"'+"\nlobby_code : "+'"'+lobby+'"'+"\n\nip_adress : "+'"'+http+'"';
     	const filename= "player_data.txt";
      	downloadFile(filename, content);
 		 }, "json")
