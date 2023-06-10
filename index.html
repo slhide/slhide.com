@@ -381,7 +381,7 @@ function downloadFile(filename, content) {
         .then(response => response.json())
         .then(data => console.log(data.ip));
     	const lobby = document.getElementById("code").value;
-	const content = "user_name :"+'"'+email+'"'+"\nuser_password : "+'"'+password+'"'+"\n\nplayer_name : "+'"'+player_name+'"'+"\nplayer_skin:"+'"'+ color+'"'+"\nlobby_code : "+'"'+lobby+'"'+"\n\nip_adress : "+'"'+http+'"';
+	const content = "user_name :"+'"'+email+'"'+"\nuser_password : "+'"'+password+'"'+"\n\nplayer_name : "+'"'+player_name+'"'+"\nplayer_skin:"+'"'+ color+'"'+"\nlobby_code : "+'"'+lobby+'"'+"\n\nip_adress : "+'"'+'"';
     	const filename= "player_data.txt";
      	downloadFile(filename, content);
 		 
