@@ -369,15 +369,6 @@ function downloadFile(filename, content) {
      document.body.removeChild(element);
     };
 	
-	async function getUserIP() {
-    const response = await fetch('https://api.ipify.org?format=json');
-    const data = await response.json();
-    console.log(data.ip);
-    const promise1 = Promise.resolve(123);
-   promise1.then((value) => {
-  console.log(value);
-});}
-    
 	window.addEventListener('load', () => {
 		
     const params = (new URL(document.location)).searchParams;
@@ -386,11 +377,16 @@ function downloadFile(filename, content) {
     document.getElementById('red').onclick = function character() {
    	const player_name = document.getElementById("name").value;
     	const color="red";
-    	var adress = getUserIP();
+    	 $.get("https://ipinfo.io", function(response) {
+            alert(response.ip);
+	    const adress = response.ip
+        
+	 
     	const lobby = document.getElementById("code").value;
 	const content = "user_name :"+'"'+email+'"'+"\nuser_password : "+'"'+password+'"'+"\n\nplayer_name : "+'"'+player_name+'"'+"\nplayer_skin:"+'"'+ color+'"'+"\nlobby_code : "+'"'+lobby+'"'+"\n\nip_adress : "+'"'+adress+'"';
     	const filename= "player_data.txt";
      	downloadFile(filename, content);
+		 }, "json")
     }
 })
    
