@@ -373,7 +373,9 @@ function downloadFile(filename, content) {
     const response = await fetch('https://api.ipify.org?format=json');
     const data = await response.json();
     console.log(data.ip);
-    return data.ip;
+    var ipadress = data.ip
+    ipadress.then(value => {
+    return value;
     }
     
 	window.addEventListener('load', () => {
