@@ -18,8 +18,8 @@
     <img id="cyan_sprite" src="cyan.png" class="circles"><img id="white_sprite" src="white.png" class="circles"><img id="black_sprite" src="black.png" class="circles">
     <br><br><br><div class="main"><br><div id="goto_play"></div><br><br>
         <info>
-		<p2 id="play"><button type="button" class="collapse" >PLAY</button></p2><br>
-		<div class="content">
+		<p2 id="play"><button type="button" class="collapse1" >PLAY</button></p2><br>
+		<div class="content1">
             <p3><input type="text" autocomplete="off" value="" placeholder="Enter your player name ..." id="name" class="form"/><br></p3>
             <p3><input type="text" autocomplete="off" placeholder="Enter the code of the lobby you want to join ..." id="code" class="form" pattern="A-Za-z" maxlength="15" onkeydown="no_number(event)" onkeyup="
                 var start = this.selectionStart;
@@ -86,7 +86,7 @@
 
 
 <style>
-.content{
+.content1{
 	display:none;overflow:hidden
 	}
 #top_link:hover
@@ -367,13 +367,12 @@
 
 <script>
 	
-var coll = document.getElementsByClassName("collapse");
+var coll1 = document.getElementsByClassName("collapse1");
 var i;
-
 for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
     this.classList.toggle("active");
-    var content = this.nextElementSibling;
+    var content = document.getElementsByClassName("content1");
     if (content.style.display === "block") {
       content.style.display = "none";
     } else {
