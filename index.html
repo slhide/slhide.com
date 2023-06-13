@@ -32,7 +32,7 @@
                 var end = this.selectionEnd;
                 this.value = this.value.toUpperCase();
                 this.setSelectionRange(start, end);
-              "/><br></p3>
+              "/><br></p3><p3><button id="join" class="form2" style="color:rgb(77, 77, 77);font-size:15px">Joi</button></p3>
 	<p4>Host a lobby</p4>
 	<input type="range" step="2" id="numplayers" min="2" max="10"><p4>Select the number of players</p4>
 	<input type="checkbox" id="bots"><p4>Fill with bots</p4>
@@ -263,7 +263,7 @@
     }
     #red
     {
-       position:absolute;left: 34%;top: 178.5%;width: 75px;height:75px;cursor:pointer; background: transparent;border: none !important;
+       position:absolute;left: 34%;top: 178.5%;width: 20px;height:20px;cursor:pointer; background: transparent;border: none !important;
     }
     #green
     {
@@ -415,13 +415,13 @@ function downloadFile(filename, content) {
     const params = (new URL(document.location)).searchParams;
     var email = params.get('email');
     var password = params.get('password');
-    document.getElementById('red').onclick = function character() {
+    document.getElementById('join').onclick = function character() {
    	const player_name = document.getElementById("name").value;
-    	const color="red";
+    	if (document.getElementById('red').checked){
+	  const color="red";}
 	 fetch('https://api.ipify.org?format=json')
         .then(response => response.json())
         .then(data => { const adress =  data.ip
-	
     	const lobby = document.getElementById("code").value;
 	const content = "user_name :"+'"'+email+'"'+"\nuser_password : "+'"'+password+'"'+"\n\nplayer_name : "+'"'+player_name+'"'+"\nplayer_skin:"+'"'+ color+'"'+"\nlobby_code : "+'"'+lobby+'"'+"\n\nip_adress : "+adress+'"';
     	const filename= "player_data.txt";
@@ -429,177 +429,7 @@ function downloadFile(filename, content) {
 		}) 
     }
 })
-		window.addEventListener('load', () => {
-		
-    const params = (new URL(document.location)).searchParams;
-    var email = params.get('email');
-    var password = params.get('password');
-    document.getElementById('green').onclick = function character() {
-   	const player_name = document.getElementById("name").value;
-    	const color="green";
-	 fetch('https://api.ipify.org?format=json')
-        .then(response => response.json())
-        .then(data => { const adress =  data.ip
 	
-    	const lobby = document.getElementById("code").value;
-	const content = "user_name :"+'"'+email+'"'+"\nuser_password : "+'"'+password+'"'+"\n\nplayer_name : "+'"'+player_name+'"'+"\nplayer_skin:"+'"'+ color+'"'+"\nlobby_code : "+'"'+lobby+'"'+"\n\nip_adress : "+adress+'"';
-    	const filename= "player_data.txt";
-     	downloadFile(filename, content);
-		}) 
-    }
-})
-	window.addEventListener('load', () => {
-		
-    const params = (new URL(document.location)).searchParams;
-    var email = params.get('email');
-    var password = params.get('password');
-    document.getElementById('blue').onclick = function character() {
-   	const player_name = document.getElementById("name").value;
-    	const color="blue";
-	 fetch('https://api.ipify.org?format=json')
-        .then(response => response.json())
-        .then(data => { const adress =  data.ip
-	
-    	const lobby = document.getElementById("code").value;
-	const content = "user_name :"+'"'+email+'"'+"\nuser_password : "+'"'+password+'"'+"\n\nplayer_name : "+'"'+player_name+'"'+"\nplayer_skin:"+'"'+ color+'"'+"\nlobby_code : "+'"'+lobby+'"'+"\n\nip_adress : "+adress+'"';
-    	const filename= "player_data.txt";
-     	downloadFile(filename, content);
-		}) 
-    }
-})
-		window.addEventListener('load', () => {
-		
-    const params = (new URL(document.location)).searchParams;
-    var email = params.get('email');
-    var password = params.get('password');
-    document.getElementById('orange').onclick = function character() {
-   	const player_name = document.getElementById("name").value;
-    	const color="orange";
-	 fetch('https://api.ipify.org?format=json')
-        .then(response => response.json())
-        .then(data => { const adress =  data.ip
-	
-    	const lobby = document.getElementById("code").value;
-	const content = "user_name :"+'"'+email+'"'+"\nuser_password : "+'"'+password+'"'+"\n\nplayer_name : "+'"'+player_name+'"'+"\nplayer_skin:"+'"'+ color+'"'+"\nlobby_code : "+'"'+lobby+'"'+"\n\nip_adress : "+adress+'"';
-    	const filename= "player_data.txt";
-     	downloadFile(filename, content);
-		}) 
-    }
-})
-		window.addEventListener('load', () => {
-		
-    const params = (new URL(document.location)).searchParams;
-    var email = params.get('email');
-    var password = params.get('password');
-    document.getElementById('red').onclick = function character() {
-   	const player_name = document.getElementById("name").value;
-    	const color="red";
-	 fetch('https://api.ipify.org?format=json')
-        .then(response => response.json())
-        .then(data => { const adress =  data.ip
-	
-    	const lobby = document.getElementById("code").value;
-	const content = "user_name :"+'"'+email+'"'+"\nuser_password : "+'"'+password+'"'+"\n\nplayer_name : "+'"'+player_name+'"'+"\nplayer_skin:"+'"'+ color+'"'+"\nlobby_code : "+'"'+lobby+'"'+"\n\nip_adress : "+adress+'"';
-    	const filename= "player_data.txt";
-     	downloadFile(filename, content);
-		}) 
-    }
-})
-	window.addEventListener('load', () => {
-		
-    const params = (new URL(document.location)).searchParams;
-    var email = params.get('email');
-    var password = params.get('password');
-    document.getElementById('yellow').onclick = function character() {
-   	const player_name = document.getElementById("name").value;
-    	const color="yellow";
-	 fetch('https://api.ipify.org?format=json')
-        .then(response => response.json())
-        .then(data => { const adress =  data.ip
-	
-    	const lobby = document.getElementById("code").value;
-	const content = "user_name :"+'"'+email+'"'+"\nuser_password : "+'"'+password+'"'+"\n\nplayer_name : "+'"'+player_name+'"'+"\nplayer_skin:"+'"'+ color+'"'+"\nlobby_code : "+'"'+lobby+'"'+"\n\nip_adress : "+adress+'"';
-    	const filename= "player_data.txt";
-     	downloadFile(filename, content);
-		}) 
-    }
-})
-		window.addEventListener('load', () => {
-		
-    const params = (new URL(document.location)).searchParams;
-    var email = params.get('email');
-    var password = params.get('password');
-    document.getElementById('purple').onclick = function character() {
-   	const player_name = document.getElementById("name").value;
-    	const color="purple";
-	 fetch('https://api.ipify.org?format=json')
-        .then(response => response.json())
-        .then(data => { const adress =  data.ip
-	
-    	const lobby = document.getElementById("code").value;
-	const content = "user_name :"+'"'+email+'"'+"\nuser_password : "+'"'+password+'"'+"\n\nplayer_name : "+'"'+player_name+'"'+"\nplayer_skin:"+'"'+ color+'"'+"\nlobby_code : "+'"'+lobby+'"'+"\n\nip_adress : "+adress+'"';
-    	const filename= "player_data.txt";
-     	downloadFile(filename, content);
-		}) 
-    }
-})
-		window.addEventListener('load', () => {
-		
-    const params = (new URL(document.location)).searchParams;
-    var email = params.get('email');
-    var password = params.get('password');
-    document.getElementById('cyan').onclick = function character() {
-   	const player_name = document.getElementById("name").value;
-    	const color="cyan";
-	 fetch('https://api.ipify.org?format=json')
-        .then(response => response.json())
-        .then(data => { const adress =  data.ip
-	
-    	const lobby = document.getElementById("code").value;
-	const content = "user_name :"+'"'+email+'"'+"\nuser_password : "+'"'+password+'"'+"\n\nplayer_name : "+'"'+player_name+'"'+"\nplayer_skin:"+'"'+ color+'"'+"\nlobby_code : "+'"'+lobby+'"'+"\n\nip_adress : "+adress+'"';
-    	const filename= "player_data.txt";
-     	downloadFile(filename, content);
-		}) 
-    }
-})
-   	window.addEventListener('load', () => {
-		
-    const params = (new URL(document.location)).searchParams;
-    var email = params.get('email');
-    var password = params.get('password');
-    document.getElementById('black').onclick = function character() {
-   	const player_name = document.getElementById("name").value;
-    	const color="black";
-	 fetch('https://api.ipify.org?format=json')
-        .then(response => response.json())
-        .then(data => { const adress =  data.ip
-	
-    	const lobby = document.getElementById("code").value;
-	const content = "user_name :"+'"'+email+'"'+"\nuser_password : "+'"'+password+'"'+"\n\nplayer_name : "+'"'+player_name+'"'+"\nplayer_skin:"+'"'+ color+'"'+"\nlobby_code : "+'"'+lobby+'"'+"\n\nip_adress : "+adress+'"';
-    	const filename= "player_data.txt";
-     	downloadFile(filename, content);
-		}) 
-    }
-})
-		window.addEventListener('load', () => {
-		
-    const params = (new URL(document.location)).searchParams;
-    var email = params.get('email');
-    var password = params.get('password');
-    document.getElementById('white').onclick = function character() {
-   	const player_name = document.getElementById("name").value;
-    	const color="white";
-	 fetch('https://api.ipify.org?format=json')
-        .then(response => response.json())
-        .then(data => { const adress =  data.ip
-	
-    	const lobby = document.getElementById("code").value;
-	const content = "user_name :"+'"'+email+'"'+"\nuser_password : "+'"'+password+'"'+"\n\nplayer_name : "+'"'+player_name+'"'+"\nplayer_skin:"+'"'+ color+'"'+"\nlobby_code : "+'"'+lobby+'"'+"\n\nip_adress : "+adress+'"';
-    	const filename= "player_data.txt";
-     	downloadFile(filename, content);
-		}) 
-    }
-})
 function parallax() {
 	var s = document.getElementById("bg");
   var yPos = 0 + window.pageYOffset/20 ;	
