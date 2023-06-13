@@ -26,21 +26,7 @@
         
 		<p2 id="play">PLAY</p2><br>
             <p3><input type="text" autocomplete="off" value="" placeholder="Enter your player name ..." id="name" class="form"/><br></p3><br>
-	<p8><strong>Join a lobby</strong></p8><br>
-            <p3><input type="text" autocomplete="off" placeholder="Enter the code of the lobby you want to join ..." id="code" class="form" pattern="A-Za-z" maxlength="15" onkeydown="no_number(event)" onkeyup="
-                var start = this.selectionStart;
-                var end = this.selectionEnd;
-                this.value = this.value.toUpperCase();
-                this.setSelectionRange(start, end);
-              "/><br></p3><p3><button id="join" class="form2" style="color:rgb(77, 77, 77);font-size:15px">Join</button></p3><br>
-	<p8><strong>Host a lobby</strong></p8>
-	<div><input type="range" step="2" id="numplayers" min="2" max="10"><label><p4>Select the number of players</p4></label></div>
-	
-	<div><input type="checkbox" id="bots"><label><p4>Fill with bots</p4></label></div><br>
-            <p3><button id="create" class="form2" style="color:rgb(77, 77, 77);font-size:15px">Create</button></p3>
-                 
-        <info/><br><hr><br>
-        <character>
+	        <character>
             <p4>Pick a character bellow</p4><br>
             <common class="character">
                 <img id="common" src="common-banner.png" width="750"/><input type="checkbox" id="red">
@@ -56,6 +42,21 @@
             </legendary>
 		<br>
         </character>
+	<p8><strong>Join a lobby</strong></p8><br>
+            <p3><input type="text" autocomplete="off" placeholder="Enter the code of the lobby you want to join ..." id="code" class="form" pattern="A-Za-z" maxlength="15" onkeydown="no_number(event)" onkeyup="
+                var start = this.selectionStart;
+                var end = this.selectionEnd;
+                this.value = this.value.toUpperCase();
+                this.setSelectionRange(start, end);
+              "/><br></p3><p3><button id="join" class="form2" style="color:rgb(77, 77, 77);font-size:15px">Join</button></p3><br><hr><br>
+	<p8><strong>Host a lobby</strong></p8>
+	<div><input type="range" step="2" id="numplayers" min="2" max="10"><label><p4>Select the number of players</p4></label></div>
+	
+	<div><input type="checkbox" id="bots"><label><p4>Fill with bots</p4></label></div><br>
+            <p3><button id="create" class="form2" style="color:rgb(77, 77, 77);font-size:15px">Create</button></p3>
+                 
+        <info/><br><hr><br>
+
     </div><br><br>
     <div class="description"><br>
         <p2 id="description">Gameplay</p2><br>
