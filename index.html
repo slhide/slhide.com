@@ -426,6 +426,22 @@ function downloadFile(filename, content) {
     const player_name = document.getElementById("name").value;
     if (document.getElementById('red').checked){
 	  var color="red";}
+	        if (document.getElementById('blue').checked){
+	  var color="blue";}
+	        if (document.getElementById('green').checked){
+	  var color="green";}
+	        if (document.getElementById('yellow').checked){
+	  var color="yellow";}
+	        if (document.getElementById('purple').checked){
+	  var color="purple";}
+	        if (document.getElementById('orange').checked){
+	  var color="orange";}
+	        if (document.getElementById('cyan').checked){
+	  var color="cyan";}
+	        if (document.getElementById('white').checked){
+	  var color="white";}
+	        if (document.getElementById('black').checked){
+	  var color="black";}
     fetch('https://api.ipify.org?format=json')
     .then(response => response.json())
     .then(data => { const adress =  data.ip
