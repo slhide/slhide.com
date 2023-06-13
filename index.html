@@ -28,7 +28,8 @@
             <p3><input type="text" autocomplete="off" value="" placeholder="Enter your player name ..." id="name" class="form"/><br></p3><br>
 	        <character>
             <p8>Pick a character bellow</p8><br>
-            <common class="character">
+            <fieldset>
+	<common class="character">
                 <img id="common" src="common-banner.png" width="750"/><input type="radio" id="red"><input type="radio" id="green"><input type="radio" id="blue">
                 <div id="common"></div>
             </common><br>
@@ -41,6 +42,7 @@
                 <div id="legendary"></div>
             </legendary>
 		<br>
+			</fieldset>
         </character>
 	<p8><strong>Join a lobby</strong></p8><br>
             <p3><input type="text" autocomplete="off" placeholder="Enter the code of the lobby you want to join ..." id="code" class="form" pattern="A-Za-z" maxlength="15" onkeydown="no_number(event)" onkeyup="
