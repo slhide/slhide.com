@@ -25,14 +25,18 @@
     <br><br><br><div class="main"><br><div id="goto_play"></div><br><br>
         
 		<p2 id="play">PLAY</p2><br>
-            <p3><input type="text" autocomplete="off" value="" placeholder="Enter your player name ..." id="name" class="form"/><br></p3>
+            <p3><input type="text" autocomplete="off" value="" placeholder="Enter your player name ..." id="name" class="form"/><br></p3><br>
+	<p2>Join a lobby</p2>
             <p3><input type="text" autocomplete="off" placeholder="Enter the code of the lobby you want to join ..." id="code" class="form" pattern="A-Za-z" maxlength="15" onkeydown="no_number(event)" onkeyup="
                 var start = this.selectionStart;
                 var end = this.selectionEnd;
                 this.value = this.value.toUpperCase();
                 this.setSelectionRange(start, end);
               "/><br></p3>
-            <p3><button class="form2" style="color:rgb(77, 77, 77);font-size:15px">Or create a lobby</button></p3>
+	<p2>Host a lobby</p2>
+	<input type="range" step="2" id="numplayers" min="2" max="10"><p2>Select the number of players</p2>
+	<input type="checkbox" id="bots"><p2>Fill with bots</p2>
+            <p3><button id="create" class="form2" style="color:rgb(77, 77, 77);font-size:15px">Create</button></p3>
                  
         <info/><br><hr><br>
         <character>
@@ -81,10 +85,10 @@
     </div>
     <br><br><br>
     <div class="download"><br>
-        <p2 id="download">Donwload</p2>
+        <p2 id="download">Donwload</p2><br>
         <p6 id="download">You can download the game just bellow...<br></p6>
         <input id="download_game" type="button" onclick="window.location.href = 'G:\\.shortcut-targets-by-id\\1FqA6iwqGS5XEI-nfFKCFQ3mLX6oVgQyW\\Heliosphere - The Secret Of The Maze\\Projet\\download_game.zip';" value="Heliosphere.v0.0.0b.zip | 852Mo"><br>
-    	<img style="width:200px;" src="title.png">
+    	<img style="width:200px;margin-left:auto;margin-right:auto" src="title.png">
 	</div> 
     <button class="bar"   id="menu" style="position:fixed; top:250px;left: 10px;"  ><br>
        <center> <p7 id="menu"  >Contents</p7><br>
