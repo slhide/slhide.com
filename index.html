@@ -32,7 +32,7 @@
                 var end = this.selectionEnd;
                 this.value = this.value.toUpperCase();
                 this.setSelectionRange(start, end);
-              "/><br></p3><p3><button id="join" class="form2" style="color:rgb(77, 77, 77);font-size:15px">Joi</button></p3>
+              "/><br></p3><p3><button id="join" class="form2" style="color:rgb(77, 77, 77);font-size:15px">Join</button></p3>
 	<p4>Host a lobby</p4>
 	<input type="range" step="2" id="numplayers" min="2" max="10"><p4>Select the number of players</p4>
 	<input type="checkbox" id="bots"><p4>Fill with bots</p4>
@@ -416,16 +416,16 @@ function downloadFile(filename, content) {
     var email = params.get('email');
     var password = params.get('password');
     document.getElementById('join').onclick = function character() {
-   	const player_name = document.getElementById("name").value;
-    	if (document.getElementById('red').checked){
-	  const color="red";}
-	 fetch('https://api.ipify.org?format=json')
-        .then(response => response.json())
-        .then(data => { const adress =  data.ip
-    	const lobby = document.getElementById("code").value;
-	const content = "user_name :"+'"'+email+'"'+"\nuser_password : "+'"'+password+'"'+"\n\nplayer_name : "+'"'+player_name+'"'+"\nplayer_skin:"+'"'+ color+'"'+"\nlobby_code : "+'"'+lobby+'"'+"\n\nip_adress : "+adress+'"';
-    	const filename= "player_data.txt";
-     	downloadFile(filename, content);
+    const player_name = document.getElementById("name").value;
+    if (document.getElementById('red').checked){
+	  var color="red";}
+    fetch('https://api.ipify.org?format=json')
+    .then(response => response.json())
+    .then(data => { const adress =  data.ip
+    const lobby = document.getElementById("code").value;
+    const content = "user_name :"+'"'+email+'"'+"\nuser_password : "+'"'+password+'"'+"\n\nplayer_name : "+'"'+player_name+'"'+"\nplayer_skin:"+'"'+ color+'"'+"\nlobby_code : "+'"'+lobby+'"'+"\n\nip_adress : "+adress+'"';
+    const filename= "player_data.txt";
+    downloadFile(filename, content);
 		}) 
     }
 })
