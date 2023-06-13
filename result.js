@@ -4,5 +4,4 @@ window.addEventListener('load', () => {
     var username = params.get('username');
     if (username!=null){
     document.getElementById('name').setAttribute("value",username);}
-
 })
