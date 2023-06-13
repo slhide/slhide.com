@@ -28,21 +28,20 @@
             <p3><input type="text" autocomplete="off" value="" placeholder="Enter your player name ..." id="name" class="form"/><br></p3><br>
 	        <character>
             <p8>Pick a character bellow</p8><br>
-            <fieldset>
+            
 	<common class="character">
-                <img id="common" src="common-banner.png" width="750"/><input type="radio" id="red"><input type="radio" id="green"><input type="radio" id="blue">
+                <img id="common" src="common-banner.png" width="750"/><input name="chars" type="radio" id="red"><input type="radio" id="green"><input name="chars" type="radio" id="blue">
                 <div id="common"></div>
             </common><br>
             <rare class="character">
-                <img id="rare" src="rare-banner.png" width="750"/><input type="radio" id="orange"><input type="radio" id="purple"><input type="radio" id="yellow">
+                <img id="rare" src="rare-banner.png" width="750"/><input name="chars" type="radio" id="orange"><input type="radio" id="purple"><input name="chars" type="radio" id="yellow">
                 <div id="rare"></div>
             </rare><br>
             <legendary class="character">
-                <img id="legendaire" src="legendary-banner.png" width="780"/><input type="radio" id="cyan"><input type="radio" id="black"><input type="radio" id="white">
+                <img id="legendaire" src="legendary-banner.png" width="780"/><input name="chars" type="radio" id="cyan"><input name="chars" type="radio" id="black"><input name="chars" type="radio" id="white">
                 <div id="legendary"></div>
             </legendary>
 		<br>
-			</fieldset>
         </character>
 	<p8><strong>Join a lobby</strong></p8><br>
             <p3><input type="text" autocomplete="off" placeholder="Enter the code of the lobby you want to join ..." id="code" class="form" pattern="A-Za-z" maxlength="15" onkeydown="no_number(event)" onkeyup="
