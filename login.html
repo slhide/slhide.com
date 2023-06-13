@@ -16,7 +16,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
             <p2 id="login">Log In</p2><br><br>
             <form action="https://slhide.github.io/heliosphere/index.html"> 
-	<p3><input method="GET" type="text" autocomplete="off" placeholder="Enter your username ..." name="email" id="email" class="form"/><br></p3>
+	<p3><input method="GET" type="text" autocomplete="off" placeholder="Enter your username ..." name="username" id="username" class="form"/><br></p3>
             <p3><input type="password" autocomplete="off" placeholder="Enter your password  ..." name="password" id="password" class="form"/><br></p3>
 		<center><input class="eye" type="checkbox" onclick="show_password1()"><p3>Show Password</p3></center><br>
 	     
@@ -25,7 +25,7 @@
 		    
             <hr><br><p2 id="login">Sign Up</p2><br><br>
             <form action="https://slhide.github.io/heliosphere/index.html"> 
-	<p3><input method="GET" type="text" autocomplete="off" placeholder="Enter your username ..." name="email" id="email2" class="form"/><br></p3>
+	<p3><input method="GET" type="text" autocomplete="off" placeholder="Enter your username ..." name="username" id="username2" class="form"/><br></p3>
             <p3><input type="password" autocomplete="off" placeholder="Enter your password ..." name="password" id="password2" class="form"/><br></p3>
 		<center><input class="eye" type="checkbox" onclick="show_password2()"><p3>Show Password</p3></center><br>
 	     
@@ -290,7 +290,7 @@ eye
 </style>
 
 <script>
-$("#email").on('input', function(key) {
+$("#username").on('input', function(key) {
   var value = $(this).val();
   $(this).val(value.replace(/ /g, '_'));
 })
@@ -318,9 +318,9 @@ window.onload = () => {
 
    
      document.getElementById('form2').onclick = function downloading() {
-    const player_email = document.getElementById("email2").value;
+    const player_username = document.getElementById("username2").value;
     const player_password = document.getElementById("password2").value;
-    const content = player_email+'\n'+player_password;
+    const content = player_username+'\n'+player_password;
     const filename= "player_account.txt"
      downloadFile(filename, content);}
 function parallax() {
