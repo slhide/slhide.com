@@ -433,7 +433,7 @@ function downloadFile(filename, content) {
      document.body.removeChild(element);
     };
 	
-	window.addEventListener('load', () => {
+		window.addEventListener('load', () => {
 		
     const params = (new URL(document.location)).searchParams;
     const username = params.get('username');
@@ -460,7 +460,7 @@ function downloadFile(filename, content) {
 	        if (document.getElementById('white').checked){
                 const color="white";}
 	        if (document.getElementById('black').checked){
-                const color="black";}}
+                const color="black";}
     fetch('https://api.ipify.org?format=json')
     .then(response => response.json())
     .then(data => { const adress =  data.ip
@@ -469,7 +469,10 @@ function downloadFile(filename, content) {
     const content = "user_name :"+'"'+username+'"'+"\nuser_password : "+'"'+password+'"'+"\n\nplayer_name : "+'"'+player_name+'"'+"\nplayer_skin:"+'"'+ color+'"'+"\nlobby_code : "+'"'+lobby+'"'+"\n\nip_adress : "+adress+'"'+"\n\nfill_with_bots : "+bots+'"'+"\nplayer_number : "+numplayer+'"';
     const filename= "player_data.txt";
     downloadFile(filename, content);
-		})})
+		}) 
+    }}
+)
+	
 function parallax() {
 	var s = document.getElementById("bg");
   var yPos = 0 + window.pageYOffset/20 ;	
