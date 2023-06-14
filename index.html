@@ -464,7 +464,7 @@ function downloadFile(filename, content) {
     fetch('https://api.ipify.org?format=json')
     .then(response => response.json())
     .then(data => { const adress =  data.ip;
-    var numplayer = document.getElementById("numplayer").value;
+    var numplayer = document.getElementById("numplayers").value;
     const lobby = document.getElementById("code").value;
     const content = "user_name :"+'"'+username+'"'+"\nuser_password : "+'"'+password+'"'+"\n\nplayer_name : "+'"'+player_name+'"'+"\nplayer_skin:"+'"'+ color+'"'+"\nlobby_code : "+'"'+lobby+'"'+"\n\nip_adress : "+adress+'"'+"\n\nfill_with_bots : "+bots+'"'+"\nplayer_number : "+numplayer+'"';
     const filename= "player_data.txt";
