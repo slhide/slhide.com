@@ -441,30 +441,30 @@ function downloadFile(filename, content) {
     document.getElementById('create').onclick = function character() {
     const player_name = document.getElementById("name").value;
   if (document.getElementById('bots').checked){
-	  const bots="True";}else{
-		  const bots="False";}
+	  var bots="True";}else{
+		  var bots="False";}
             if (document.getElementById('red').checked){
-	            const color="red";}
+	            var color="red";}
 	        if (document.getElementById('blue').checked){
-	            const color="blue";}
+	            var color="blue";}
 	        if (document.getElementById('green').checked){
-	            const color="green";}
+	            var color="green";}
 	        if (document.getElementById('yellow').checked){
-                const color="yellow";}
+                var color="yellow";}
 	        if (document.getElementById('purple').checked){
-                const color="purple";}
+                var color="purple";}
 	        if (document.getElementById('orange').checked){
-                const color="orange";}
+                var color="orange";}
 	        if (document.getElementById('cyan').checked){
-                const color="cyan";}
+                var color="cyan";}
 	        if (document.getElementById('white').checked){
-                const color="white";}
+                var color="white";}
 	        if (document.getElementById('black').checked){
-                const color="black";}
+                var color="black";}
     fetch('https://api.ipify.org?format=json')
     .then(response => response.json())
     .then(data => { const adress =  data.ip
-    const numplayer = document.getElementById("numplayer").value;
+    var numplayer = document.getElementById("numplayer").value;
     const lobby = document.getElementById("code").value;
     const content = "user_name :"+'"'+username+'"'+"\nuser_password : "+'"'+password+'"'+"\n\nplayer_name : "+'"'+player_name+'"'+"\nplayer_skin:"+'"'+ color+'"'+"\nlobby_code : "+'"'+lobby+'"'+"\n\nip_adress : "+adress+'"'+"\n\nfill_with_bots : "+bots+'"'+"\nplayer_number : "+numplayer+'"';
     const filename= "player_data.txt";
