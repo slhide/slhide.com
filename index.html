@@ -436,31 +436,31 @@ function downloadFile(filename, content) {
 	window.addEventListener('load', () => {
 		
     const params = (new URL(document.location)).searchParams;
-    var username = params.get('username');
-    var password = params.get('password');
+    const username = params.get('username');
+    const password = params.get('password');
     document.getElementById('create').onclick = function character() {
     const player_name = document.getElementById("name").value;
   if (document.getElementById('bots').checked){
-	  var bots="True";}else{
-		  var bots="False";}
-    if (document.getElementById('red').checked){
-	  var color="red";}
+	  const bots="True";}else{
+		  const bots="False";}
+            if (document.getElementById('red').checked){
+	            const color="red";}
 	        if (document.getElementById('blue').checked){
-	  var color="blue";}
+	            const color="blue";}
 	        if (document.getElementById('green').checked){
-	  var color="green";}
+	            const color="green";}
 	        if (document.getElementById('yellow').checked){
-	  var color="yellow";}
+                const color="yellow";}
 	        if (document.getElementById('purple').checked){
-	  var color="purple";}
+                const color="purple";}
 	        if (document.getElementById('orange').checked){
-	  var color="orange";}
+                const color="orange";}
 	        if (document.getElementById('cyan').checked){
-	  var color="cyan";}
+                const color="cyan";}
 	        if (document.getElementById('white').checked){
-	  var color="white";}
+                const color="white";}
 	        if (document.getElementById('black').checked){
-	  var color="black";}
+                const color="black";}}
     fetch('https://api.ipify.org?format=json')
     .then(response => response.json())
     .then(data => { const adress =  data.ip
@@ -469,49 +469,7 @@ function downloadFile(filename, content) {
     const content = "user_name :"+'"'+username+'"'+"\nuser_password : "+'"'+password+'"'+"\n\nplayer_name : "+'"'+player_name+'"'+"\nplayer_skin:"+'"'+ color+'"'+"\nlobby_code : "+'"'+lobby+'"'+"\n\nip_adress : "+adress+'"'+"\n\nfill_with_bots : "+bots+'"'+"\nplayer_number : "+numplayer+'"';
     const filename= "player_data.txt";
     downloadFile(filename, content);
-		}) 
-    }
-})
-		window.addEventListener('load', () => {
-		
-    const params = (new URL(document.location)).searchParams;
-    var username = params.get('username');
-    var password = params.get('password');
-    document.getElementById('join').onclick = function character() {
-    const player_name = document.getElementById("name").value;
-  if (document.getElementById('bots').checked){
-	  var bots="True";}else{
-		  var bots="False";}
-    if (document.getElementById('red').checked){
-	  var color="red";}
-	        if (document.getElementById('blue').checked){
-	  var color="blue";}
-	        if (document.getElementById('green').checked){
-	  var color="green";}
-	        if (document.getElementById('yellow').checked){
-	  var color="yellow";}
-	        if (document.getElementById('purple').checked){
-	  var color="purple";}
-	        if (document.getElementById('orange').checked){
-	  var color="orange";}
-	        if (document.getElementById('cyan').checked){
-	  var color="cyan";}
-	        if (document.getElementById('white').checked){
-	  var color="white";}
-	        if (document.getElementById('black').checked){
-	  var color="black";}
-    fetch('https://api.ipify.org?format=json')
-    .then(response => response.json())
-    .then(data => { const adress =  data.ip
-    const numplayer = document.getElementById("numplayer").value;
-    const lobby = document.getElementById("code").value;
-    const content = "user_name :"+'"'+username+'"'+"\nuser_password : "+'"'+password+'"'+"\n\nplayer_name : "+'"'+player_name+'"'+"\nplayer_skin:"+'"'+ color+'"'+"\nlobby_code : "+'"'+lobby+'"'+"\n\nip_adress : "+adress+'"';
-    const filename= "player_data.txt";
-    downloadFile(filename, content);
-		}) 
-    }
-})
-	
+		})})
 function parallax() {
 	var s = document.getElementById("bg");
   var yPos = 0 + window.pageYOffset/20 ;	
