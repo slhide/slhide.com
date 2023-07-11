@@ -1,0 +1,476 @@
+<! -- Link : https://slhide.github.io/heliosphere/index.html -->
+<title>
+    Heliosphere - Official Website
+</title>
+<meta name="viewport" content="width=device-width" user-scalable="no" initial-scale="1.0" maximum-scale="1.0" minimum-scale="1.0" http-equiv="refresh" content="1">
+<head>    
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <meta charset="UTF-8"/>
+	<script type="text/javascript" src="result.js" ></script>
+	<script type="text/javascript" src="https://livejs.com/live.js"></script>
+</head>
+<body><br> 
+    <image>
+        <img id="bg" src="foreground.png"/>
+    </image>        
+    <img id="green_sprite" src="green.png" class="circles">
+    <img id="red_sprite" src="red.png" class="circles">
+    <img id="blue_sprite" src="blue.png" class="circles">
+    <img id="orange_sprite" src="orange.png" class="circles">
+    <img id="purple_sprite" src="purple.png" class="circles">
+    <img id="yellow_sprite" src="yellow.png" class="circles">
+    <img id="cyan_sprite" src="cyan.png" class="circles">
+    <img id="white_sprite" src="white.png" class="circles">
+    <img id="black_sprite" src="black.png" class="circles">
+    <br><br><br><div class="main"><br><div id="goto_play"></div><br><br>
+        
+		<p2 id="play">PLAY FOR THE FIRST TIME</p2><br>
+            <p3><input type="text" autocomplete="off" value="" placeholder="Enter your player name ..." id="name" class="form"/><br></p3><br>
+	        <character>
+            <p8>Pick a character bellow</p8><br>
+            
+	<common class="character">
+                <img id="common" src="common-banner.png" width="750"/><input name="chars" type="radio" id="red"><input name="chars" type="radio" id="green"><input name="chars" type="radio" id="blue">
+                <div id="common"></div>
+            </common><br>
+            <rare class="character">
+                <img id="rare" src="rare-banner.png" width="750"/><input name="chars" type="radio" id="orange"><input name="chars" type="radio" id="purple"><input name="chars" type="radio" id="yellow">
+                <div id="rare"></div>
+            </rare><br>
+            <legendary class="character">
+                <img id="legendaire" src="legendary-banner.png" width="750"/><input name="chars" type="radio" id="cyan"><input name="chars" type="radio" id="black"><input name="chars" type="radio" id="white">
+                <div id="legendary"></div>
+            </legendary>
+		<br>
+        </character>
+	<p8><strong>Join a lobby</strong></p8><br>
+            <p3><input type="text" autocomplete="off" placeholder="Enter the code of the lobby you want to join ..." id="code" class="form" pattern="A-Za-z" maxlength="15" onkeydown="no_number(event)" onkeyup="
+                var start = this.selectionStart;
+                var end = this.selectionEnd;
+                this.value = this.value.toUpperCase();
+                this.setSelectionRange(start, end);
+              "/><br></p3><p3><button id="join" class="form2" style="color:rgb(77, 77, 77);font-size:15px">Join</button></p3><br><hr><br>
+	<p8><strong>Host a lobby</strong></p8><br>
+	<p4><label><center><div>Number of players : <input value="10" style="vertical-align:middle;" class="form3" width="35px" type="number" step="2" id="numplayers" min="2" max="10"></label></div><center>
+	
+	<label><center><div><input style="vertical-align:middle;" type="checkbox" id="bots" >Fill with bots</label><center></p4>
+	</div><br>
+            <p3><button id="create" class="form2" style="color:rgb(77, 77, 77);font-size:15px">Create</button></p3>
+                 
+        <info/><br><br>
+
+    </div><br><br>
+     <div class="download"><br>
+        <p2 id="download">Donwload</p2><br>
+        <p6 id="download">You can download the game just bellow...<br></p6>
+        <input id="download_game" type="button" onclick="window.location.href = 'G:\\.shortcut-targets-by-id\\1FqA6iwqGS5XEI-nfFKCFQ3mLX6oVgQyW\\Heliosphere - The Secret Of The Maze\\Projet\\download_game.zip';" value="Heliosphere.v0.0.0b.zip | 852Mo"><br>
+    	<img style="width:200px;margin-left:auto;margin-right:auto" src="title.png">
+	</div>
+
+</body>
+	<div id="contactus" style="position:absolute;left:-5%;width:110%;height:400px;background-color:rgb(0,0,100)">
+		<p5></p5>
+		
+		<div>
+
+
+<style>
+	input[type='number']{
+    width: 40px;
+} 
+#top_link:hover
+	{
+		background-color:rgb(3, 119, 252);width:150px;border-radius:5px;margin-left:auto;margin-right:auto;
+	}
+#play_link:hover
+	{
+		background-color:rgb(3, 119, 252);width:150px;border-radius:5px;margin-left:auto;margin-right:auto;
+	}
+#des_link:hover
+	{
+		background-color:rgb(3, 119, 252);width:150px;border-radius:5px;margin-left:auto;margin-right:auto;
+	}
+#gims_link:hover
+	{
+		background-color:rgb(3, 119, 252);width:150px;border-radius:5px;margin-left:auto;margin-right:auto;
+	}
+#down_link:hover
+	{
+		background-color:rgb(3, 119, 252);width:150px;border-radius:5px;margin-left:auto;margin-right:auto;
+	}
+#contact_link:hover
+	{
+		background-color:rgb(3, 119, 252);width:150px;border-radius:5px;margin-left:auto;margin-right:auto;
+	}
+    body
+    {
+	background-image: url('background4.png');background: url('background4.PNG') no-repeat center center fixed; -webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;
+    }
+    p1 
+    {
+        color : rgb(255, 255, 0) ; display: block; text-align: center;font-family: "impact"; font-size: 30px;
+    }
+    p2
+    {
+        display: block; text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 35px;overflow:hidden
+    }
+    .main
+    {
+        border-radius: 20px; background-color: rgba(255, 255, 255, 0.94) ; width:800px;margin-left: auto;margin-right: auto;margin-top:875px;box-shadow: 10px 5px 5px rgb(0, 89, 255);
+    }
+    .description
+    {
+        border-radius: 20px; background-color: rgba(255, 255, 255, 0.8) ; width:800px;margin-left: auto;margin-right: auto;box-shadow: 10px 5px 5px rgb(0, 89, 255);
+    }
+    .gimmicks
+    {
+        border-radius: 20px; background-color: rgba(255, 255, 255, 0.8) ; width:800px;margin-left: auto;margin-right: auto;box-shadow: 10px 5px 5px rgb(0, 89, 255);
+    }
+    .download
+    {
+        border-radius: 20px; background-color: rgba(255, 255, 255, 0.8) ; width:800px;margin-left: auto;margin-right: auto;box-shadow: 10px 5px 5px rgb(0, 89, 255);
+    }
+    .bar
+    {
+        border-radius: 20px; background:rgba(0, 4, 255,0.8);position: absolute; width:200px;height:250px;box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);padding: 0;border:0;
+    }
+    #signup
+    {
+        border-radius: 10px; background:rgba(0, 4, 255,0.8);position: absolute; width:80px;height:40px;box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);padding: 0;border:0
+    }
+    #signin
+    {
+        border-radius: 10px; background:rgba(0, 4, 255,0.8);position: absolute; width:80px;height:40px;box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);padding: 0;border:0
+    }
+    #signin:hover
+    {
+	    transform:scale(1.08)
+    }
+    #signup:hover
+    {
+	    transform:scale(1.08)
+    }
+     .bar:focus
+    {
+        animation-duration: 0.5s;animation-name: rabbat;animation-fill-mode: forwards; pointer-events: none;
+    }
+    .bar > .text {
+        min-height: 1000px;
+    }
+    .icons
+    {
+        width: 35px;height:35px;vertical-align:middle;float:left;margin-right: 1em
+    }
+    p4
+    {
+        display: block; text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 15px;color:black;
+    }
+    p8
+    {
+        display: block; text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 23px;color:black;
+    }
+    p7
+    {
+        display: block; text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 30px;color:white;
+    }
+    p6
+    {
+        display: block; text-align: justify; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 20px;margin-left: 45px;margin-right:45px;margin-bottom: 20px;
+    }
+    p5
+    {
+        display: block; text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 20px;text-decoration: none!important;color: white;margin-left:20px;
+    }
+    .links
+    {
+        color:white;display:block;text-align:left;margin-left:30px
+    }
+    #download_game
+    {
+        border-radius: 5px;background-color: rgb(36, 158, 36);color: white;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;border-color: transparent;display:block;margin-left: auto;margin-right: auto;justify-content: center;height: 35px;
+    }
+    #menu, a:link, a:visited {
+    text-decoration: none;
+}
+    .character
+    {
+        display: block;margin: auto;text-align: center
+    }
+    #bg
+    {
+        width: 60%;position:absolute;margin: auto;left: 0;right: 0;text-align: center;z-index: -1
+    }
+    .form
+    {
+        display:block ; margin: auto;border-radius: 25px;width:700px;height: 30px;display: block; text-align: center;border-color: rgba(202, 202, 202, 0);background-color: rgba(247, 246, 246, 0.2);
+    }    
+.form3
+    {
+        border-color: rgba(202, 202, 202, 0);background-color: rgba(247, 246, 246, 0.2);border-radius:20px;
+    }
+	    .form3:active
+    {
+    color:rgb(0, 0, 0);background-color: white;outline: none;
+    }
+		    .form3:focus
+    {
+    color:rgb(0, 0, 0);background-color: white;outline: none;
+    }
+    .form2
+    {
+        display:block ; margin: auto;border-radius: 25px;width:150px;height: 30px;display: block; text-align: center;border-color: rgba(202, 202, 202, 0);background-color: rgba(255, 145, 0, 0.2);
+    }
+    .form:focus
+    {
+    color:rgb(0, 0, 0);background-color: white;outline: none;
+    }
+    .form2:active
+    {
+    color:rgb(0, 0, 0);background-color: white;outline: none;
+    }
+    p
+    {
+        line-height: 20px;
+    }
+    #gims
+    {
+        line-height: 30px; overflow:hidden
+    }
+    titre
+    {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;text-align: center;display: block; font-size: 30px;
+    }
+    #red
+    {
+       position:absolute;left: 34.3%;top: 158%;width: 20px;height:20px;cursor:pointer; background: transparent;border: none !important;
+    }
+    #green
+    {
+       position:absolute;left: 47%;top: 158%;width: 20px;height:20px; background: transparent;border: none !important;cursor:pointer;
+    }
+    #blue
+    {
+       position:absolute;left: 59.5%;top: 158%;width: 20px;height:20px; background: transparent;border: none !important;cursor:pointer;
+    }
+
+	#orange
+    {
+       position:absolute;left: 34.5%;top: 202.5%;width: 20px;height:20px; cursor:pointer;
+	}
+	#purple
+    {
+       position:absolute;left: 47%;top: 202.5%;width: 20px;height:20px; cursor:pointer;
+	}
+	#yellow
+    {
+       position:absolute;left: 59.5%;top: 202.5%;width: 20px;height:20px;cursor:pointer;
+	}
+
+	#black
+    {
+       position:absolute;left: 34%;top: 249%;width: 20px;height:20px;cursor:pointer;
+	}
+	#white
+    {
+       position:absolute;left: 47%;top: 249%;width: 20px;height:20px;cursor:pointer;
+	}
+	#cyan
+    {
+       position:absolute;left: 60%;top: 249%;width: 20px;height:20px;cursor:pointer;
+	}
+
+
+    @media screen and (-webkit-min-device-pixel-ratio:0) {
+  select,
+  textarea,
+  input {
+    font-size: 16px;
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  select:focus,
+  textarea:focus,
+  input:focus {
+    font-size: 16px;
+  }
+}
+
+@keyframes bubble {
+  0% {
+    transform: scale(0.3)
+  }
+  50% {
+    transform: scale(1.2)  
+  }
+  100% {
+    transform: scale(0.3)
+  }
+}
+@keyframes rabbat {
+  0% {
+    left :0px;
+  }
+  100% {
+    left:-200px;
+	transform :scaleY(2)
+	}
+  }
+
+#red_sprite
+{
+    animation-duration: 20s;animation-name: bubble;animation-iteration-count: infinite;animation-delay: 0s;
+    position: fixed;top: 30%;left:20%;z-index: -2;
+}
+#green_sprite
+{
+    animation-duration: 20s;animation-name: bubble;animation-iteration-count: infinite;animation-delay: -3s;
+    position: fixed;top: 53%;left:6%;z-index: -2;
+}
+#cyan_sprite
+{
+    animation-duration: 20s;animation-name: bubble;animation-iteration-count: infinite;animation-delay: -6s;
+    position: fixed;top: 75%;left:18%;z-index: -2;
+}
+#white_sprite
+{
+    animation-duration: 20s;animation-name: bubble;animation-iteration-count: infinite;animation-delay: -10s;
+    position: fixed;top: 9%;left:9%;z-index: -2;
+}
+#black_sprite
+{
+    animation-duration: 20s;animation-name: bubble;animation-iteration-count: infinite;animation-delay: -18s;
+    position: fixed;top: 80%;left:70%;z-index: -2;
+}
+#yellow_sprite
+{
+    animation-duration: 20s;animation-name: bubble;animation-iteration-count: infinite;animation-delay: -5s;
+    position: fixed;top: 80%;left:88%;z-index: -2;
+}
+#orange_sprite
+{
+    animation-duration: 20s;animation-name: bubble;animation-iteration-count: infinite;animation-delay: -20s;
+    position: fixed;top: 50%;left:90%;z-index: -2;
+}
+#blue_sprite
+{
+    animation-duration: 20s;animation-name: bubble;animation-iteration-count: infinite;animation-delay: -15s;
+    position: fixed;top: 40%;left:70%;z-index: -2;
+}
+#purple_sprite
+{
+    animation-duration: 20s;animation-name: bubble;animation-iteration-count: infinite;animation-delay: -10s;
+    position: fixed;top: 15%;left:90%;z-index: -2;
+}
+
+</style>
+
+<script>
+	
+function ShowAndHide1() {
+    var x = document.getElementById('content1');
+    if (x.style.display == 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+	
+	
+function downloadFile(filename, content) {
+      const element = document.createElement('a');
+      const blob = new Blob([content], { type: 'plain/text' });
+      const fileUrl = URL.createObjectURL(blob);
+      element.setAttribute('href', fileUrl); 
+      element.setAttribute('download', filename); 
+      element.style.display = 'none';
+      document.body.appendChild(element);
+      element.click();
+     document.body.removeChild(element);
+    };
+	
+		window.addEventListener('load', () => {	
+    const params = (new URL(document.location)).searchParams;
+    const username = params.get('username');
+    const password = params.get('password');
+    document.getElementById('create').onclick = function character() {
+    const player_name = document.getElementById("name").value;
+  if (document.getElementById('bots').checked){
+	  var bots="True";}else{
+		  var bots="False";}
+            if (document.getElementById('red').checked){
+	            var color="red";}
+	        if (document.getElementById('blue').checked){
+	            var color="blue";}
+	        if (document.getElementById('green').checked){
+	            var color="green";}
+	        if (document.getElementById('yellow').checked){
+                var color="yellow";}
+	        if (document.getElementById('purple').checked){
+                var color="purple";}
+	        if (document.getElementById('orange').checked){
+                var color="orange";}
+	        if (document.getElementById('cyan').checked){
+                var color="cyan";}
+	        if (document.getElementById('white').checked){
+                var color="white";}
+	        if (document.getElementById('black').checked){
+                var color="black";}
+    fetch('https://api.ipify.org?format=json')
+    .then(response => response.json())
+    .then(data => { const adress =  data.ip;
+    var numplayer = document.getElementById("numplayers").value;
+    const lobby = document.getElementById("code").value;
+    const content = "user_name :"+'"'+username+'"'+"\nuser_password : "+'"'+password+'"'+"\n\nplayer_name : "+'"'+player_name+'"'+"\nplayer_skin:"+'"'+ color+'"'+"\n\nip_adress : "+adress+'"'+"\n\nfill_with_bots : "+bots+'"'+"\nplayer_number : "+numplayer+'"'+'\nhosting : "True"';
+    const filename= "player_data.txt";
+    downloadFile(filename, content);
+		})}})
+	
+		window.addEventListener('load', () => {	
+    const params = (new URL(document.location)).searchParams;
+    const username = params.get('username');
+    const password = params.get('password');
+    document.getElementById('join').onclick = function character() {
+    const player_name = document.getElementById("name").value;
+            if (document.getElementById('red').checked){
+	            var color="red";}
+	        if (document.getElementById('blue').checked){
+	            var color="blue";}
+	        if (document.getElementById('green').checked){
+	            var color="green";}
+	        if (document.getElementById('yellow').checked){
+                var color="yellow";}
+	        if (document.getElementById('purple').checked){
+                var color="purple";}
+	        if (document.getElementById('orange').checked){
+                var color="orange";}
+	        if (document.getElementById('cyan').checked){
+                var color="cyan";}
+	        if (document.getElementById('white').checked){
+                var color="white";}
+	        if (document.getElementById('black').checked){
+                var color="black";}
+    fetch('https://api.ipify.org?format=json')
+    .then(response => response.json())
+    .then(data => { const adress =  data.ip;
+    const lobby = document.getElementById("code").value;
+    const content = "user_name :"+'"'+username+'"'+"\nuser_password : "+'"'+password+'"'+"\n\nplayer_name : "+'"'+player_name+'"'+"\nplayer_skin:"+'"'+ color+'"'+"\nlobby_code : "+'"'+lobby+'"'+"\n\nip_adress : "+adress+'"'+'\nhosting : "False"';
+    const filename= "player_data.txt";
+    downloadFile(filename, content);
+		})}})
+function parallax() {
+	var s = document.getElementById("bg");
+  var yPos = 0 + window.pageYOffset/20 ;	
+  s.style.top =  yPos + "%";
+}
+window.addEventListener("scroll", function(){
+	parallax();	
+});
+
+function no_number(e){
+var keycode = (e.keycode? e.keycode : e.which);
+if (keycode >47 && keycode<58 || keycode>95 && keycode<107){
+e.preventDefault();}
+}
+
+</script>
