@@ -30,7 +30,7 @@
             <p8>Pick a character bellow</p8><br>
             
 	<div width="90%"><common>
-                <img id="common" src="common-banner.png" width="750"/><input name="chars" type="radio" id="red"><input name="chars" type="radio" id="green"><input name="chars" type="radio" id="blue">
+                <img id="common" src="common-banner.png" draggable="false" width="750"/><input name="chars" type="radio" id="red"><input name="chars" type="radio" id="green"><input name="chars" type="radio" id="blue">
                 <div id="common"></div>
             </common></div><br>
 			
@@ -235,15 +235,15 @@
     }
     #red
     {
-       left: 34.3%;top: 158%;width: 20px;height:20px;cursor:pointer; background: transparent;border: none !important;
+       position:absolute;left: 34.3%;top: 158%;width: 20px;height:20px;cursor:pointer; background: transparent;border: none !important;
     }
     #green
     {
-       left: 47%;top: 158%;width: 20px;height:20px; background: transparent;border: none !important;cursor:pointer;
+       position:absolute;left: 47%;top: 158%;width: 20px;height:20px; background: transparent;border: none !important;cursor:pointer;
     }
     #blue
     {
-       left: 59.5%;top: 158%;width: 20px;height:20px; background: transparent;border: none !important;cursor:pointer;
+       position:absolute;left: 59.5%;top: 158%;width: 20px;height:20px; background: transparent;border: none !important;cursor:pointer;
     }
 
 	#orange
