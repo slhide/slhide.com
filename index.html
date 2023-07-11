@@ -24,48 +24,9 @@
     <img id="black_sprite" src="black.png" class="circles">
     <br><br><br><div class="main"><br><div id="goto_play"></div><br><br>
         
-		<p2 id="play">PLAY</p2><br>
-            <p3><input type="text" autocomplete="off" value="" placeholder="Enter your player name ..." id="name" class="form"/><br></p3><br>
-	        <character>
-            <p8>Pick a character bellow</p8><br>
+		<p2 id="play">PLAY FOR THE FIRST TIME</p2><br>
+            <a href="https://slhide.github.io/heliosphere/play.html"><p3>Click here</p3></a><br>
             
-	<common class="character">
-                <img id="common" src="common-banner.png" width="750"/><input name="chars" type="radio" id="red"><input name="chars" type="radio" id="green"><input name="chars" type="radio" id="blue">
-                <div id="common"></div>
-            </common><br>
-            <rare class="character">
-                <img id="rare" src="rare-banner.png" width="750"/><input name="chars" type="radio" id="orange"><input name="chars" type="radio" id="purple"><input name="chars" type="radio" id="yellow">
-                <div id="rare"></div>
-            </rare><br>
-            <legendary class="character">
-                <img id="legendaire" src="legendary-banner.png" width="750"/><input name="chars" type="radio" id="cyan"><input name="chars" type="radio" id="black"><input name="chars" type="radio" id="white">
-                <div id="legendary"></div>
-            </legendary>
-		<br>
-        </character>
-	<p8><strong>Join a lobby</strong></p8><br>
-            <p3><input type="text" autocomplete="off" placeholder="Enter the code of the lobby you want to join ..." id="code" class="form" pattern="A-Za-z" maxlength="15" onkeydown="no_number(event)" onkeyup="
-                var start = this.selectionStart;
-                var end = this.selectionEnd;
-                this.value = this.value.toUpperCase();
-                this.setSelectionRange(start, end);
-              "/><br></p3><p3><button id="join" class="form2" style="color:rgb(77, 77, 77);font-size:15px">Join</button></p3><br><hr><br>
-	<p8><strong>Host a lobby</strong></p8><br>
-	<p4><label><center><div>Number of players : <input value="10" style="vertical-align:middle;" class="form3" width="35px" type="number" step="2" id="numplayers" min="2" max="10"></label></div><center>
-	
-	<label><center><div><input style="vertical-align:middle;" type="checkbox" id="bots" >Fill with bots</label><center></p4>
-	</div><br>
-            <p3><button id="create" class="form2" style="color:rgb(77, 77, 77);font-size:15px">Create</button></p3>
-                 
-        <info/><br><br>
-
-    </div><br><br>
-     <div class="download"><br>
-        <p2 id="download">Donwload</p2><br>
-        <p6 id="download">You can download the game just bellow...<br></p6>
-        <input id="download_game" type="button" onclick="window.location.href = 'G:\\.shortcut-targets-by-id\\1FqA6iwqGS5XEI-nfFKCFQ3mLX6oVgQyW\\Heliosphere - The Secret Of The Maze\\Projet\\download_game.zip';" value="Heliosphere.v0.0.0b.zip | 852Mo"><br>
-    	<img style="width:200px;margin-left:auto;margin-right:auto" src="title.png">
-	</div>
 	<div class="description"><br>
         <p2 id="description">Gameplay</p2><br>
         <p6>&emsp;Heliosphere - The Secret of The Maze is a multiplayer Hide N Seek game, where 2 teams will have to find the other one in turn in a maze. The maze features cool powers that the player can use whenever he wants.<br><br>&emsp;At the beginning of the game,  there is a grace period, and after that, a random team attacks the other one during a random amount of time, while the other one must hide. In the meantime, each player can collect items, earn EXP, have fun,.. To avoid camping, little ennemies (only visible on the map) will chase the nearest player and make him loose HP.<br>
