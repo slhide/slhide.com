@@ -48,7 +48,7 @@
 	
 </style>
 
-<body>
+<body id="bg">
 	<center><div class="start"></div></center>
 <div class="new">
 		
@@ -86,3 +86,13 @@
 	linking {text-decoration:none;color:white;font-size:25px;font-family:calibri;margin-left:450px;border:1px solid white}
 	#linking {color:white;text-decoration:none;}
 </style>
+<script>
+	function parallax() {
+	var s = document.getElementById("bg");
+  var yPos = 0 + window.pageYOffset/20 ;	
+  s.style.top =  yPos + "%";
+}
+window.addEventListener("scroll", function(){
+	parallax();	
+});
+</script>
